@@ -14,9 +14,133 @@
                 @include('components.navbar')
             </div>
 
+            <header class="bg-gray-50 py-8">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:flex xl:items-center xl:justify-between">
+                  <div class="flex-1 min-w-0">
+                    <nav class="flex" aria-label="Breadcrumb">
+                      <ol role="list" class="flex items-center space-x-4">
+                        <li>
+                          <div>
+                            <a href="#" class="text-sm font-medium text-gray-500 hover:text-gray-700">Products</a>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="flex items-center">
+                            <!-- Heroicon name: solid/chevron-right -->
+                            <svg class="flex-shrink-0 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <a href="#" class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700">Notion Template</a>
+                          </div>
+                        </li>
+                      </ol>
+                    </nav>
+
+                    <h1 class="mt-2 text-2xl font-bold leading-7 text-gray-900 sm:text-3xl sm:truncate">Back End Developer</h1>
+
+                    <div class="mt-1 flex flex-col sm:flex-row sm:flex-wrap sm:mt-0 sm:space-x-8">
+                      <div class="mt-2 flex items-center text-sm text-gray-500">
+                        <!-- Heroicon name: solid/briefcase -->
+                        <svg class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd" />
+                          <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z" />
+                        </svg>
+                        Digital Good
+                      </div>
+                      <div class="mt-2 flex items-center text-sm text-gray-500">
+                        <!-- Heroicon name: solid/location-marker -->
+                        <svg class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                        </svg>
+                        Support Included
+                      </div>
+                      <div class="mt-2 flex items-center text-sm text-gray-500">
+                        <!-- Heroicon name: solid/currency-dollar -->
+                        <svg class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z" />
+                          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd" />
+                        </svg>
+                        $120
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mt-5 flex xl:mt-0 xl:ml-4">
+
+                    <span class="sm:ml-3 relative z-0">
+                      <div>
+                        <label id="listbox-label" class="sr-only"> Change published status </label>
+                        <div class="relative">
+                          <div class="inline-flex shadow-sm rounded-md divide-x divide-purple-600">
+                            <div class="relative z-0 inline-flex shadow-sm rounded-md divide-x divide-purple-600">
+                              <div class="relative inline-flex items-center bg-purple-500 py-2 pl-3 pr-4 border border-transparent rounded-l-md shadow-sm text-white">
+                                <!-- Heroicon name: solid/check -->
+                                <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <p class="ml-2.5 text-sm font-medium">Published</p>
+                              </div>
+                              <button type="button" class="relative inline-flex items-center bg-purple-500 p-2 rounded-l-none rounded-r-md text-sm font-medium text-white hover:bg-purple-600 focus:outline-none focus:z-10 focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-purple-500" aria-haspopup="listbox" aria-expanded="true" aria-labelledby="listbox-label">
+                                <span class="sr-only">Change published status</span>
+                                <!-- Heroicon name: solid/chevron-down -->
+                                <svg class="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                  <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+
+                          <!--
+                            Select popover, show/hide based on select state.
+
+                            Entering: ""
+                              From: ""
+                              To: ""
+                            Leaving: "transition ease-in duration-100"
+                              From: "opacity-100"
+                              To: "opacity-0"
+                          -->
+                          <ul class="origin-top-right absolute left-0 mt-2 -mr-1 w-72 rounded-md shadow-lg overflow-hidden bg-white divide-y divide-gray-200 ring-1 ring-black ring-opacity-5 focus:outline-none sm:left-auto sm:right-0" tabindex="-1" role="listbox" aria-labelledby="listbox-label" aria-activedescendant="listbox-option-0">
+                            <!--
+                              Select option, manage highlight styles based on mouseenter/mouseleave and keyboard navigation.
+
+                              Highlighted: "text-white bg-purple-500", Not Highlighted: "text-gray-900"
+                            -->
+                            <li class="text-gray-900 cursor-default select-none relative p-4 text-sm" id="listbox-option-0" role="option">
+                              <div class="flex flex-col">
+                                <div class="flex justify-between">
+                                  <!-- Selected: "font-semibold", Not Selected: "font-normal" -->
+                                  <p class="font-normal">Published</p>
+                                  <!--
+                                    Checkmark, only display for selected option.
+
+                                    Highlighted: "text-white", Not Highlighted: "text-purple-500"
+                                  -->
+                                  <span class="text-purple-500">
+                                    <!-- Heroicon name: solid/check -->
+                                    <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                  </span>
+                                </div>
+                                <!-- Highlighted: "text-purple-200", Not Highlighted: "text-gray-500" -->
+                                <p class="text-gray-500 mt-2">This job posting can be viewed by anyone who has the link.</p>
+                              </div>
+                            </li>
+
+                            <!-- More items... -->
+                          </ul>
+                        </div>
+                      </div>
+                    </span>
+
+
+                  </div>
+                </div>
+            </header>
+
             <div class="bg-white">
                 <div class="mx-auto py-6 px-4 sm:py-12 sm:px-6 lg:max-w-7xl lg:px-8">
-                  <!-- Product -->
+                  <!-- Product Detail -->
                   <div class="lg:grid lg:grid-rows-1 lg:grid-cols-7 lg:gap-x-8 lg:gap-y-10 xl:gap-x-16">
                     <!-- Product image -->
                     <div class="lg:row-end-1 lg:col-span-4">
@@ -25,13 +149,12 @@
                       </div>
                     </div>
 
-                    <!-- Product details -->
+                    <!-- Product right sidebar -->
                     <div class="max-w-2xl mx-auto mt-14 sm:mt-16 lg:max-w-none lg:mt-0 lg:row-end-2 lg:row-span-2 lg:col-span-3">
                       <div class="flex flex-col-reverse">
                         <div class="mt-4">
-                          <h1 class="text-2xl font-extrabold tracking-tight text-gray-900 sm:text-3xl">Application UI Icon Pack</h1>
+                          <h2 class="text-xl font-bold leading-7 text-gray-900 sm:text-2xl sm:truncate">Product Summary</h2>
 
-                          <h2 id="information-heading" class="sr-only">Product information</h2>
                           <p class="text-sm text-gray-500 mt-2">Version 1.0 (Updated <time datetime="2021-06-05">June 5, 2021</time>)</p>
                         </div>
 
@@ -78,24 +201,13 @@
                         <button type="button" class="w-full bg-indigo-50 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-indigo-700 hover:bg-indigo-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-indigo-500">Preview</button>
                       </div>
 
-                      <div class="border-t border-gray-200 mt-10 pt-10">
-                        <h3 class="text-sm font-medium text-gray-900">Highlights</h3>
-                        <div class="mt-4 prose prose-sm text-gray-500">
-                          <ul role="list">
-                            <li>200+ SVG icons in 3 unique styles</li>
-
-                            <li>Compatible with Figma, Sketch, and Adobe XD</li>
-
-                            <li>Drawn on 24 x 24 pixel grid</li>
-                          </ul>
-                        </div>
-                      </div>
-
+                      <!-- License -->
                       <div class="border-t border-gray-200 mt-4 pt-4">
                         <h3 class="text-sm font-medium text-gray-900">License</h3>
                         <p class="mt-4 text-sm text-gray-500">For personal and professional use. You cannot resell or redistribute these icons in their original or modified state. <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">Read full license</a></p>
                       </div>
 
+                      <!-- Share -->
                       <div class="border-t border-gray-200 mt-4 pt-4">
                         <h3 class="text-sm font-medium text-gray-900">Share</h3>
                         <ul role="list" class="flex items-center space-x-6 mt-4">
@@ -125,172 +237,187 @@
                           </li>
                         </ul>
                       </div>
-                    </div>
 
-                    <div class="w-full max-w-2xl mx-auto mt-16 lg:max-w-none lg:mt-0 lg:col-span-4">
-                      <div>
-                        <div class="border-b border-gray-200">
-                          <div class="-mb-px flex space-x-8" aria-orientation="horizontal" role="tablist">
-                            <!-- Selected: "border-indigo-600 text-indigo-600", Not Selected: "border-transparent text-gray-700 hover:text-gray-800 hover:border-gray-300" -->
-                            <button id="tab-reviews" class="border-transparent text-gray-700 hover:text-gray-800 hover:border-gray-300 whitespace-nowrap py-6 border-b-2 font-medium text-sm" aria-controls="tab-panel-reviews" role="tab" type="button">Customer Reviews</button>
-                            <button id="tab-faq" class="border-transparent text-gray-700 hover:text-gray-800 hover:border-gray-300 whitespace-nowrap py-6 border-b-2 font-medium text-sm" aria-controls="tab-panel-faq" role="tab" type="button">FAQ</button>
-                            <button id="tab-license" class="border-transparent text-gray-700 hover:text-gray-800 hover:border-gray-300 whitespace-nowrap py-6 border-b-2 font-medium text-sm" aria-controls="tab-panel-license" role="tab" type="button">License</button>
-                          </div>
-                        </div>
+                      <!-- FAQs -->
+                      <div class="border-t border-gray-200 mt-4 pt-4">
+                        <h3 class="text-sm font-medium text-gray-900">Frequently Asked Questions</h3>
 
-                        <!-- 'Customer Reviews' panel, show/hide based on tab state -->
-                        <div id="tab-panel-reviews" class="-mb-10" aria-labelledby="tab-reviews" role="tabpanel" tabindex="0">
-                          <h3 class="sr-only">Customer Reviews</h3>
+                        <div class="py-1 bg-white md:py-1 lg:py-1">
+                            <div class="max-w-6xl mx-auto xl:px-0">
 
-                          <div class="flex text-sm text-gray-500 space-x-4">
-                            <div class="flex-none py-10">
-                              <img src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=256&h=256&q=80" alt="" class="w-10 h-10 bg-gray-100 rounded-full">
+                                <div class="relative mt-2 space-y-1">
+
+                                    <!-- Question 1 -->
+                                    <div x-data="{ show: false }" class="relative overflow-hidden border-b border-gray-100 select-none">
+                                        <h4 @click="show=!show" class="flex items-center justify-between text-sm font-medium text-gray-500 cursor-pointer sm:text-sm py-3 hover:text-gray-900">
+                                            <span>How Many API Calls Do I Get For Free?</span>
+                                            <svg class="w-6 h-6 mr-2 transition-all duration-200 ease-out transform rotate-0" :class="{ '-rotate-180' : show }" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                        </h4>
+                                        <p class="pt-0 mt-1 text-gray-600 sm:text-base py-3" x-transition:enter="transition-all ease-out duration-300" x-transition:enter-start="opacity-0 transform -translate-y-4" x-transition:enter-end="opacity-100 transform -translate-y-0" x-transition:leave="transition-all ease-in duration-300" x-transition:leave-start="opacity-100 transform -translate-y-0" x-transition:leave-end="opacity-0 transform -translate-y-4" x-show="show" style="display: none;">The free plan will give you 2,000 free API calls. At anytime, if you wish to <a href="#_" class="font-medium text-purple-600 underline" data-primary="purple-600">upgrade to a paid plan</a>, you can eaisily increase that amount.</p>
+                                    </div>
+
+                                    <!-- Question 1 -->
+                                    <div x-data="{ show: false }" class="relative overflow-hidden border-b border-gray-100 select-none">
+                                        <h4 @click="show=!show" class="flex items-center justify-between text-sm font-medium text-gray-500 cursor-pointer sm:text-sm py-3 hover:text-gray-900">
+                                            <span>How Many API Calls Do I Get For Free?</span>
+                                            <svg class="w-6 h-6 mr-2 transition-all duration-200 ease-out transform rotate-0" :class="{ '-rotate-180' : show }" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                        </h4>
+                                        <p class="pt-0 mt-1 text-gray-600 sm:text-base py-3" x-transition:enter="transition-all ease-out duration-300" x-transition:enter-start="opacity-0 transform -translate-y-4" x-transition:enter-end="opacity-100 transform -translate-y-0" x-transition:leave="transition-all ease-in duration-300" x-transition:leave-start="opacity-100 transform -translate-y-0" x-transition:leave-end="opacity-0 transform -translate-y-4" x-show="show" style="display: none;">The free plan will give you 2,000 free API calls. At anytime, if you wish to <a href="#_" class="font-medium text-purple-600 underline" data-primary="purple-600">upgrade to a paid plan</a>, you can eaisily increase that amount.</p>
+                                    </div>
+
+                                </div>
+
                             </div>
-                            <div class="py-10">
-                              <h3 class="font-medium text-gray-900">Emily Selman</h3>
-                              <p><time datetime="2021-07-16">July 16, 2021</time></p>
-
-                              <div class="flex items-center mt-4">
-                                <!--
-                                  Heroicon name: solid/star
-
-                                  Active: "text-yellow-400", Default: "text-gray-300"
-                                -->
-                                <svg class="text-yellow-400 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                </svg>
-
-                                <!-- Heroicon name: solid/star -->
-                                <svg class="text-yellow-400 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                </svg>
-
-                                <!-- Heroicon name: solid/star -->
-                                <svg class="text-yellow-400 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                </svg>
-
-                                <!-- Heroicon name: solid/star -->
-                                <svg class="text-yellow-400 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                </svg>
-
-                                <!-- Heroicon name: solid/star -->
-                                <svg class="text-yellow-400 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                </svg>
-                              </div>
-                              <p class="sr-only">5 out of 5 stars</p>
-
-                              <div class="mt-4 prose prose-sm max-w-none text-gray-500">
-                                <p>This icon pack is just what I need for my latest project. There's an icon for just about anything I could ever need. Love the playful look!</p>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="flex text-sm text-gray-500 space-x-4">
-                            <div class="flex-none py-10">
-                              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=256&h=256&q=80" alt="" class="w-10 h-10 bg-gray-100 rounded-full">
-                            </div>
-                            <div class="py-10 border-t border-gray-200">
-                              <h3 class="font-medium text-gray-900">Hector Gibbons</h3>
-                              <p><time datetime="2021-07-12">July 12, 2021</time></p>
-
-                              <div class="flex items-center mt-4">
-                                <!--
-                                  Heroicon name: solid/star
-
-                                  Active: "text-yellow-400", Default: "text-gray-300"
-                                -->
-                                <svg class="text-yellow-400 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                </svg>
-
-                                <!-- Heroicon name: solid/star -->
-                                <svg class="text-yellow-400 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                </svg>
-
-                                <!-- Heroicon name: solid/star -->
-                                <svg class="text-yellow-400 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                </svg>
-
-                                <!-- Heroicon name: solid/star -->
-                                <svg class="text-yellow-400 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                </svg>
-
-                                <!-- Heroicon name: solid/star -->
-                                <svg class="text-yellow-400 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                </svg>
-                              </div>
-                              <p class="sr-only">5 out of 5 stars</p>
-
-                              <div class="mt-4 prose prose-sm max-w-none text-gray-500">
-                                <p>Blown away by how polished this icon pack is. Everything looks so consistent and each SVG is optimized out of the box so I can use it directly with confidence. It would take me several hours to create a single icon this good, so it's a steal at this price.</p>
-                              </div>
-                            </div>
-                          </div>
-
-                          <!-- More reviews... -->
-                        </div>
-
-                        <!-- 'FAQ' panel, show/hide based on tab state -->
-                        <dl id="tab-panel-faq" class="text-sm text-gray-500" aria-labelledby="tab-faq" role="tabpanel" tabindex="0">
-                          <h3 class="sr-only">Frequently Asked Questions</h3>
-
-                          <dt class="mt-10 font-medium text-gray-900">What format are these icons?</dt>
-                          <dd class="mt-2 prose prose-sm max-w-none text-gray-500">
-                            <p>The icons are in SVG (Scalable Vector Graphic) format. They can be imported into your design tool of choice and used directly in code.</p>
-                          </dd>
-
-                          <dt class="mt-10 font-medium text-gray-900">Can I use the icons at different sizes?</dt>
-                          <dd class="mt-2 prose prose-sm max-w-none text-gray-500">
-                            <p>Yes. The icons are drawn on a 24 x 24 pixel grid, but the icons can be scaled to different sizes as needed. We don&#039;t recommend going smaller than 20 x 20 or larger than 64 x 64 to retain legibility and visual balance.</p>
-                          </dd>
-
-                          <!-- More FAQs... -->
-                        </dl>
-
-                        <!-- 'License' panel, show/hide based on tab state -->
-                        <div id="tab-panel-license" class="pt-10" aria-labelledby="tab-license" role="tabpanel" tabindex="0">
-                          <h3 class="sr-only">License</h3>
-
-                          <div class="prose prose-sm max-w-none text-gray-500">
-                            <h4>Overview</h4>
-
-                            <p>For personal and professional use. You cannot resell or redistribute these icons in their original or modified state.</p>
-
-                            <ul role="list">
-                              <li>You're allowed to use the icons in unlimited projects.</li>
-                              <li>Attribution is not required to use the icons.</li>
-                            </ul>
-
-                            <h4>What you can do with it</h4>
-
-                            <ul role="list">
-                              <li>Use them freely in your personal and professional work.</li>
-                              <li>Make them your own. Change the colors to suit your project or brand.</li>
-                            </ul>
-
-                            <h4>What you can't do with it</h4>
-
-                            <ul role="list">
-                              <li>Don't be greedy. Selling or distributing these icons in their original or modified state is prohibited.</li>
-                              <li>Don't be evil. These icons cannot be used on websites or applications that promote illegal or immoral beliefs or activities.</li>
-                            </ul>
-                          </div>
                         </div>
                       </div>
+
+                      <!-- Reviews -->
+                      <div class="border-t border-gray-200 mt-4 pt-4">
+                        <h3 class="text-sm font-medium text-gray-900">Buyer Reviews</h3>
+
+                        <div class="flex text-sm text-gray-500 space-x-4">
+                          <div class="flex-none py-10">
+                            <img src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=256&h=256&q=80" alt="" class="w-10 h-10 bg-gray-100 rounded-full">
+                          </div>
+                          <div class="py-10">
+                            <h3 class="font-medium text-gray-900">Emily Selman</h3>
+                            <p><time datetime="2021-07-16">July 16, 2021</time></p>
+
+                            <div class="flex items-center mt-4">
+                              <!--
+                                Heroicon name: solid/star
+
+                                Active: "text-yellow-400", Default: "text-gray-300"
+                              -->
+                              <svg class="text-yellow-400 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+
+                              <!-- Heroicon name: solid/star -->
+                              <svg class="text-yellow-400 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+
+                              <!-- Heroicon name: solid/star -->
+                              <svg class="text-yellow-400 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+
+                              <!-- Heroicon name: solid/star -->
+                              <svg class="text-yellow-400 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+
+                              <!-- Heroicon name: solid/star -->
+                              <svg class="text-yellow-400 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                            </div>
+                            <p class="sr-only">5 out of 5 stars</p>
+
+                            <div class="mt-4 prose prose-sm max-w-none text-gray-500">
+                              <p>This icon pack is just what I need for my latest project. There's an icon for just about anything I could ever need. Love the playful look!</p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="flex text-sm text-gray-500 space-x-4">
+                          <div class="flex-none py-10">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=256&h=256&q=80" alt="" class="w-10 h-10 bg-gray-100 rounded-full">
+                          </div>
+                          <div class="py-10 border-t border-gray-200">
+                            <h3 class="font-medium text-gray-900">Hector Gibbons</h3>
+                            <p><time datetime="2021-07-12">July 12, 2021</time></p>
+
+                            <div class="flex items-center mt-4">
+                              <!--
+                                Heroicon name: solid/star
+
+                                Active: "text-yellow-400", Default: "text-gray-300"
+                              -->
+                              <svg class="text-yellow-400 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+
+                              <!-- Heroicon name: solid/star -->
+                              <svg class="text-yellow-400 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+
+                              <!-- Heroicon name: solid/star -->
+                              <svg class="text-yellow-400 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+
+                              <!-- Heroicon name: solid/star -->
+                              <svg class="text-yellow-400 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+
+                              <!-- Heroicon name: solid/star -->
+                              <svg class="text-yellow-400 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                            </div>
+                            <p class="sr-only">5 out of 5 stars</p>
+
+                            <div class="mt-4 prose prose-sm max-w-none text-gray-500">
+                              <p>Blown away by how polished this icon pack is. Everything looks so consistent and each SVG is optimized out of the box so I can use it directly with confidence. It would take me several hours to create a single icon this good, so it's a steal at this price.</p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- More reviews... -->
+                      </div>
+
                     </div>
+
+                    <!-- Product left sidebar -->
+                    <div class="w-full max-w-2xl mx-auto mt-16 lg:max-w-none lg:mt-0 lg:col-span-4">
+
+                        <div class="px-3">
+                            <h2 class="text-xl font-bold leading-7 text-gray-900 sm:text-2xl sm:truncate mb-4">Product Description</h2>
+
+                            <article class="prose prose-base max-w-none space-y-2">
+                                <div>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit molestias consectetur tempore sapiente explicabo facere quia ducimus dolorum ea dolorem. Illo velit molestiae qui, quod ullam optio delectus eos alias!
+
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus, architecto id incidunt aut quae reprehenderit mollitia aliquam, harum nisi eos ea consequuntur fuga, vel voluptate nesciunt itaque? Vitae, magnam facere.
+
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam consectetur recusandae iure ipsam neque autem ea veniam delectus odio ex quaerat quo minima animi nam, voluptatum cumque. Quo, enim quia.
+                                </div>
+                                <div>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit molestias consectetur tempore sapiente explicabo facere quia ducimus dolorum ea dolorem. Illo velit molestiae qui, quod ullam optio delectus eos alias!
+
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus, architecto id incidunt aut quae reprehenderit mollitia aliquam, harum nisi eos ea consequuntur fuga, vel voluptate nesciunt itaque? Vitae, magnam facere.
+
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam consectetur recusandae iure ipsam neque autem ea veniam delectus odio ex quaerat quo minima animi nam, voluptatum cumque. Quo, enim quia.
+                                </div>
+                                <div>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit molestias consectetur tempore sapiente explicabo facere quia ducimus dolorum ea dolorem. Illo velit molestiae qui, quod ullam optio delectus eos alias!
+
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus, architecto id incidunt aut quae reprehenderit mollitia aliquam, harum nisi eos ea consequuntur fuga, vel voluptate nesciunt itaque? Vitae, magnam facere.
+
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam consectetur recusandae iure ipsam neque autem ea veniam delectus odio ex quaerat quo minima animi nam, voluptatum cumque. Quo, enim quia.
+                                </div>
+                                <div>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit molestias consectetur tempore sapiente explicabo facere quia ducimus dolorum ea dolorem. Illo velit molestiae qui, quod ullam optio delectus eos alias!
+
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus, architecto id incidunt aut quae reprehenderit mollitia aliquam, harum nisi eos ea consequuntur fuga, vel voluptate nesciunt itaque? Vitae, magnam facere.
+
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam consectetur recusandae iure ipsam neque autem ea veniam delectus odio ex quaerat quo minima animi nam, voluptatum cumque. Quo, enim quia.
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
                   </div>
                 </div>
             </div>
 
-            @include('components.startups')
         </main>
+
+        @include('components.credibility', ['tagline' => 'This product brought to you by the maker of'])
 
         <footer class="bg-gray-50" aria-labelledby="footer-heading">
             <h2 id="footer-heading" class="sr-only">Footer</h2>

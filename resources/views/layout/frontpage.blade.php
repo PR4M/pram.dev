@@ -15,25 +15,109 @@
 
               @include('components.startups')
 
-              <!-- My Services -->
+              <!-- My Products -->
               <div class="bg-white pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
-                <div class="relative max-w-lg mx-auto divide-y-2 divide-gray-200 lg:max-w-7xl">
-                  <div>
-                    <h2 class="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">Services Offer with Specialized Stacks</h2>
-                    <div class="mt-3 sm:mt-4 lg:grid lg:grid-cols-2 lg:gap-5 lg:items-center">
-                      <p class="text-xl text-gray-500">Get weekly articles in your inbox on how to grow your business.</p>
-                      <form class="mt-6 flex flex-col sm:flex-row lg:mt-0 lg:justify-end">
-                        <div>
-                          <label for="email-address" class="sr-only">Email address</label>
-                          <input id="email-address" name="email-address" type="email" autocomplete="email" required class="appearance-none w-full px-4 py-2 border border-gray-300 text-base rounded-md text-gray-900 bg-white placeholder-gray-500 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 lg:max-w-xs" placeholder="Enter your email">
+                <div class="relative max-w-lg mx-auto divide-y-2 divide-gray-200 lg:max-w-6xl">
+                  <div class="pb-4">
+                    <h2 class="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">Mind-born ideas & handcrafted products</h2>
+                        <div class="mt-3 sm:mt-4 lg:grid lg:grid-cols-2 lg:gap-5 lg:items-center">
+                            <p class="text-xl text-gray-500">Get weekly articles in your inbox on how to grow your business.</p>
+                            <div class="mt-6 flex flex-col sm:flex-row lg:mt-0 lg:justify-end">
+                                <div class="lg:max-w-xs">
+                                </div>
+                                <div class="mt-2 flex-shrink-0 w-full flex rounded-md shadow-sm sm:mt-0 sm:ml-3 sm:w-auto sm:inline-flex">
+                                    <a href="#" class="flex items-center justify-center bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-purple-700 hover:to-indigo-700">
+                                        More Products
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="mt-2 flex-shrink-0 w-full flex rounded-md shadow-sm sm:mt-0 sm:ml-3 sm:w-auto sm:inline-flex">
-                          <a href="#" class="flex items-center justify-center bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-purple-700 hover:to-indigo-700"> Explore More </a>
+                  </div>
+
+                  <div class="max-w-2xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:max-w-6xl lg:px-8">
+                    <div class="mt-6 grid grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-3">
+                      <div class="relative group">
+                        <div class="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden bg-gray-100">
+                          <img src="https://tailwindui.com/img/ecommerce-images/product-page-05-related-product-01.jpg" alt="Payment application dashboard screenshot with transaction table, financial highlights, and main clients on colorful purple background." class="object-center object-cover">
+                          <div class="flex items-end opacity-0 p-4 group-hover:opacity-100" aria-hidden="true">
+                            <div class="w-full bg-white bg-opacity-75 backdrop-filter backdrop-blur py-2 px-4 rounded-md text-sm font-medium text-gray-900 text-center">View Product</div>
+                          </div>
                         </div>
-                      </form>
+                        <div class="mt-4 flex items-center justify-between text-base font-medium text-gray-900 space-x-8">
+                          <h3>
+                            <a href="#">
+                              <span aria-hidden="true" class="absolute inset-0"></span>
+                              Fusion
+                            </a>
+                          </h3>
+                          <p>$49</p>
+                        </div>
+                        <p class="mt-1 text-sm text-gray-500">UI Kit</p>
+                      </div>
+
+                      <div class="relative group">
+                        <div class="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden bg-gray-100">
+                          <img src="https://tailwindui.com/img/ecommerce-images/product-page-05-related-product-01.jpg" alt="Payment application dashboard screenshot with transaction table, financial highlights, and main clients on colorful purple background." class="object-center object-cover">
+                          <div class="flex items-end opacity-0 p-4 group-hover:opacity-100" aria-hidden="true">
+                            <div class="w-full bg-white bg-opacity-75 backdrop-filter backdrop-blur py-2 px-4 rounded-md text-sm font-medium text-gray-900 text-center">View Product</div>
+                          </div>
+                        </div>
+                        <div class="mt-4 flex items-center justify-between text-base font-medium text-gray-900 space-x-8">
+                          <h3>
+                            <a href="#">
+                              <span aria-hidden="true" class="absolute inset-0"></span>
+                              Fusion
+                            </a>
+                          </h3>
+                          <p>$49</p>
+                        </div>
+                        <p class="mt-1 text-sm text-gray-500">UI Kit</p>
+                      </div>
+
+                      <div class="relative group">
+                        <div class="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden bg-gray-100">
+                          <img src="https://tailwindui.com/img/ecommerce-images/product-page-05-related-product-01.jpg" alt="Payment application dashboard screenshot with transaction table, financial highlights, and main clients on colorful purple background." class="object-center object-cover">
+                          <div class="flex items-end opacity-0 p-4 group-hover:opacity-100" aria-hidden="true">
+                            <div class="w-full bg-white bg-opacity-75 backdrop-filter backdrop-blur py-2 px-4 rounded-md text-sm font-medium text-gray-900 text-center">View Product</div>
+                          </div>
+                        </div>
+                        <div class="mt-4 flex items-center justify-between text-base font-medium text-gray-900 space-x-8">
+                          <h3>
+                            <a href="#">
+                              <span aria-hidden="true" class="absolute inset-0"></span>
+                              Fusion
+                            </a>
+                          </h3>
+                          <p>$49</p>
+                        </div>
+                        <p class="mt-1 text-sm text-gray-500">UI Kit</p>
+                      </div>
+                      <!-- More products... -->
                     </div>
                   </div>
-                  <div class="max-w-2xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:max-w-7xl lg:px-8">
+                </div>
+              </div>
+
+              <!-- My Services -->
+              <div class="bg-white pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
+                <div class="relative max-w-lg mx-auto divide-y-2 divide-gray-200 lg:max-w-6xl">
+                  <div class="pb-4">
+                    <h2 class="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">Services Offer with Specialized Stacks</h2>
+                        <div class="mt-3 sm:mt-4 lg:grid lg:grid-cols-2 lg:gap-5 lg:items-center">
+                            <p class="text-xl text-gray-500">Get weekly articles in your inbox on how to grow your business.</p>
+                            <div class="mt-6 flex flex-col sm:flex-row lg:mt-0 lg:justify-end">
+                                <div class="lg:max-w-xs">
+                                </div>
+                                <div class="mt-2 flex-shrink-0 w-full flex rounded-md shadow-sm sm:mt-0 sm:ml-3 sm:w-auto sm:inline-flex">
+                                    <a href="#" class="flex items-center justify-center bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-purple-700 hover:to-indigo-700">
+                                        More Products
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                  </div>
+
+                  <div class="max-w-2xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:max-w-6xl lg:px-8">
                     <div class="mt-6 grid grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-2">
 
                       <div class="p-6 bg-white sm:p-8 rounded-xl ring ring-indigo-50">
@@ -298,111 +382,9 @@
                 </div>
               </div>
 
-              <!-- My Products -->
-              <div class="bg-white pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
-                <div class="relative max-w-lg mx-auto divide-y-2 divide-gray-200 lg:max-w-7xl">
-                  <div>
-                    <h2 class="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">Mind-born ideas & handcrafted products</h2>
-                    <div class="mt-3 sm:mt-4 lg:grid lg:grid-cols-2 lg:gap-5 lg:items-center">
-                      <p class="text-xl text-gray-500">Get weekly articles in your inbox on how to grow your business.</p>
-                      <form class="mt-6 flex flex-col sm:flex-row lg:mt-0 lg:justify-end">
-                        <div>
-                          <label for="email-address" class="sr-only">Email address</label>
-                          <input id="email-address" name="email-address" type="email" autocomplete="email" required class="appearance-none w-full px-4 py-2 border border-gray-300 text-base rounded-md text-gray-900 bg-white placeholder-gray-500 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 lg:max-w-xs" placeholder="Enter your email">
-                        </div>
-                        <div class="mt-2 flex-shrink-0 w-full flex rounded-md shadow-sm sm:mt-0 sm:ml-3 sm:w-auto sm:inline-flex">
-                          <a href="#" class="flex items-center justify-center bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-purple-700 hover:to-indigo-700"> Explore More </a>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-                  <div class="max-w-2xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:max-w-7xl lg:px-8">
-                    <div class="mt-6 grid grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-4">
-                      <div class="relative group">
-                        <div class="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden bg-gray-100">
-                          <img src="https://tailwindui.com/img/ecommerce-images/product-page-05-related-product-01.jpg" alt="Payment application dashboard screenshot with transaction table, financial highlights, and main clients on colorful purple background." class="object-center object-cover">
-                          <div class="flex items-end opacity-0 p-4 group-hover:opacity-100" aria-hidden="true">
-                            <div class="w-full bg-white bg-opacity-75 backdrop-filter backdrop-blur py-2 px-4 rounded-md text-sm font-medium text-gray-900 text-center">View Product</div>
-                          </div>
-                        </div>
-                        <div class="mt-4 flex items-center justify-between text-base font-medium text-gray-900 space-x-8">
-                          <h3>
-                            <a href="#">
-                              <span aria-hidden="true" class="absolute inset-0"></span>
-                              Fusion
-                            </a>
-                          </h3>
-                          <p>$49</p>
-                        </div>
-                        <p class="mt-1 text-sm text-gray-500">UI Kit</p>
-                      </div>
-
-                      <div class="relative group">
-                        <div class="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden bg-gray-100">
-                          <img src="https://tailwindui.com/img/ecommerce-images/product-page-05-related-product-01.jpg" alt="Payment application dashboard screenshot with transaction table, financial highlights, and main clients on colorful purple background." class="object-center object-cover">
-                          <div class="flex items-end opacity-0 p-4 group-hover:opacity-100" aria-hidden="true">
-                            <div class="w-full bg-white bg-opacity-75 backdrop-filter backdrop-blur py-2 px-4 rounded-md text-sm font-medium text-gray-900 text-center">View Product</div>
-                          </div>
-                        </div>
-                        <div class="mt-4 flex items-center justify-between text-base font-medium text-gray-900 space-x-8">
-                          <h3>
-                            <a href="#">
-                              <span aria-hidden="true" class="absolute inset-0"></span>
-                              Fusion
-                            </a>
-                          </h3>
-                          <p>$49</p>
-                        </div>
-                        <p class="mt-1 text-sm text-gray-500">UI Kit</p>
-                      </div>
-
-                      <div class="relative group">
-                        <div class="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden bg-gray-100">
-                          <img src="https://tailwindui.com/img/ecommerce-images/product-page-05-related-product-01.jpg" alt="Payment application dashboard screenshot with transaction table, financial highlights, and main clients on colorful purple background." class="object-center object-cover">
-                          <div class="flex items-end opacity-0 p-4 group-hover:opacity-100" aria-hidden="true">
-                            <div class="w-full bg-white bg-opacity-75 backdrop-filter backdrop-blur py-2 px-4 rounded-md text-sm font-medium text-gray-900 text-center">View Product</div>
-                          </div>
-                        </div>
-                        <div class="mt-4 flex items-center justify-between text-base font-medium text-gray-900 space-x-8">
-                          <h3>
-                            <a href="#">
-                              <span aria-hidden="true" class="absolute inset-0"></span>
-                              Fusion
-                            </a>
-                          </h3>
-                          <p>$49</p>
-                        </div>
-                        <p class="mt-1 text-sm text-gray-500">UI Kit</p>
-                      </div>
-
-                      <div class="relative group">
-                        <div class="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden bg-gray-100">
-                          <img src="https://tailwindui.com/img/ecommerce-images/product-page-05-related-product-01.jpg" alt="Payment application dashboard screenshot with transaction table, financial highlights, and main clients on colorful purple background." class="object-center object-cover">
-                          <div class="flex items-end opacity-0 p-4 group-hover:opacity-100" aria-hidden="true">
-                            <div class="w-full bg-white bg-opacity-75 backdrop-filter backdrop-blur py-2 px-4 rounded-md text-sm font-medium text-gray-900 text-center">View Product</div>
-                          </div>
-                        </div>
-                        <div class="mt-4 flex items-center justify-between text-base font-medium text-gray-900 space-x-8">
-                          <h3>
-                            <a href="#">
-                              <span aria-hidden="true" class="absolute inset-0"></span>
-                              Fusion
-                            </a>
-                          </h3>
-                          <p>$49</p>
-                        </div>
-                        <p class="mt-1 text-sm text-gray-500">UI Kit</p>
-                      </div>
-
-                      <!-- More products... -->
-                    </div>
-                  </div>
-                </div>
-              </div>
-
               <!-- Testimonials -->
               <section class="bg-gradient-to-r from-purple-600 to-indigo-600  px-4 py-3">
-                <div class="max-w-7xl mx-auto md:grid md:grid-cols-2 md:px-6 lg:px-8">
+                <div class="max-w-6xl mx-auto md:grid md:grid-cols-2 md:px-6 lg:px-8">
                   <div class="py-12 px-4 sm:px-6 md:flex md:flex-col md:py-16 md:pl-0 md:pr-10 md:border-r md:border-indigo-900 lg:pr-16">
                     <div class="md:flex-shrink-0">
                       <img class="h-12" src="https://tailwindui.com/img/logos/tuple-logo-indigo-300.svg" alt="Tuple">
@@ -454,24 +436,28 @@
                 </div>
               </section>
 
+              <!-- Skills & Specialization -->
+
+
               <!-- My Articles -->
               <div class="bg-white pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
-                <div class="relative max-w-lg mx-auto divide-y-2 divide-gray-200 lg:max-w-7xl">
+                <div class="relative max-w-lg mx-auto divide-y-2 divide-gray-200 lg:max-w-6xl">
                   <div>
                     <h2 class="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">Toughts & Publications</h2>
                     <div class="mt-3 sm:mt-4 lg:grid lg:grid-cols-2 lg:gap-5 lg:items-center">
                       <p class="text-xl text-gray-500">Get weekly articles in your inbox on how to grow your business.</p>
-                      <form class="mt-6 flex flex-col sm:flex-row lg:mt-0 lg:justify-end">
-                        <div>
-                          <label for="email-address" class="sr-only">Email address</label>
-                          <input id="email-address" name="email-address" type="email" autocomplete="email" required class="appearance-none w-full px-4 py-2 border border-gray-300 text-base rounded-md text-gray-900 bg-white placeholder-gray-500 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 lg:max-w-xs" placeholder="Enter your email">
+                        <div class="mt-6 flex flex-col sm:flex-row lg:mt-0 lg:justify-end">
+                            <div class="lg:max-w-xs">
+                            </div>
+                            <div class="mt-2 flex-shrink-0 w-full flex rounded-md shadow-sm sm:mt-0 sm:ml-3 sm:w-auto sm:inline-flex">
+                                <a href="#" class="flex items-center justify-center bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-purple-700 hover:to-indigo-700">
+                                    More Publications
+                                </a>
+                            </div>
                         </div>
-                        <div class="mt-2 flex-shrink-0 w-full flex rounded-md shadow-sm sm:mt-0 sm:ml-3 sm:w-auto sm:inline-flex">
-                          <a href="#" class="flex items-center justify-center bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-purple-700 hover:to-indigo-700"> Explore More </a>
-                        </div>
-                      </form>
                     </div>
                   </div>
+
                   <div class="mt-6 pt-10 grid gap-16 lg:grid-cols-2 lg:gap-x-5 lg:gap-y-12">
                     <div>
                       <p class="text-sm text-gray-500">
@@ -530,7 +516,7 @@
 
               <!-- CTA Section -->
               <div class="bg-white">
-                <div class="max-w-4xl mx-auto py-16 px-4 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8 lg:flex lg:items-center lg:justify-between">
+                <div class="max-w-4xl mx-auto py-16 px-4 sm:px-6 sm:py-24 lg:max-w-6xl lg:px-8 lg:flex lg:items-center lg:justify-between">
                   <h2 class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
                     <span class="block">Ready to get started?</span>
                     <span class="-mb-1 pb-1 block bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">Get in touch or create an account.</span>
@@ -546,7 +532,7 @@
 
             <footer class="bg-gray-50" aria-labelledby="footer-heading">
               <h2 id="footer-heading" class="sr-only">Footer</h2>
-              <div class="max-w-7xl mx-auto pt-16 pb-8 px-4 sm:px-6 lg:pt-24 lg:px-8">
+              <div class="max-w-6xl mx-auto pt-16 pb-8 px-4 sm:px-6 lg:pt-24 lg:px-8">
                 <div class="xl:grid xl:grid-cols-3 xl:gap-8">
                   <div class="grid grid-cols-2 gap-8 xl:col-span-2">
                     <div class="md:grid md:grid-cols-2 md:gap-8">
