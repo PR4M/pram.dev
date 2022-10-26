@@ -17,6 +17,8 @@ class SupportResource extends Resource
 {
     protected static ?string $model = Post::class;
 
+    protected static ?string $slug = '/supports';
+
     protected static ?string $navigationGroup = 'Marketing';
 
     protected static ?string $navigationIcon = 'heroicon-o-support';

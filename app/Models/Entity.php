@@ -32,4 +32,15 @@ class Entity extends Model
     {
         return $query->where('type', 'service');
     }
+
+    /**
+     * Scope a query to only include popular users.
+     *
+     * @param  \Illuminate\Database\Eloquent\Builder  $query
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopePortfolios($query)
+    {
+        return $query->where('type', 'portfolios');
+    }
 }

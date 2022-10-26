@@ -47,6 +47,22 @@ class User extends Authenticatable
     /**
      * Get the entities owned by this user.
      */
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
+    }
+
+    /**
+     * Get the entities owned by this user.
+     */
+    public function supportTickets()
+    {
+        return $this->hasMany(Post::class)->supportTickets();
+    }
+
+    /**
+     * Get the entities owned by this user.
+     */
     public function entities()
     {
         return $this->hasMany(Entity::class);
