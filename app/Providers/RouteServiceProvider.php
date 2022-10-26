@@ -26,6 +26,10 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        Route::bind('lang', function () {
+            return request()->segment(1);
+        });
+
         $this->configureRateLimiting();
 
         $this->routes(function () {

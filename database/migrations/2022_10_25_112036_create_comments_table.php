@@ -13,21 +13,20 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('entities', function (Blueprint $table) {
+        Schema::create('comments', function (Blueprint $table) {
             $table->id();
 
-            $table->enum('type', ['product', 'service', 'work']);
+            $table->morphs('commentable');
 
-            $table->string('title');
-            $table->string('summary');
             $table->text('body');
-            $table->string('image');
 
-            // price for single item licensing
-            $table->decimal('price', 8, 2);
+            $table->char('language', 3)->default('en');
 
-            // price for single item extendend licensing (allowed for resell)
-            $table->decimal('ext_price', 8, 2);
+            $table->unsignedBigInteger('parent_id');
+            $table->foreign('parent_id')->references('id')->on('comments')->onDelete('cascade');
+
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
 
             $table->timestamps();
         });
@@ -40,6 +39,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('entities');
+        Schema::dropIfExists('comments');
     }
 };

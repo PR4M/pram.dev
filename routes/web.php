@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('layout.frontpage-new');
 });
 
+// Route::get('/{lang}', function ($val) {
+//     dd($val);
+// });
+
 Route::get('/products', function () {
     return view('layout.products-new');
 });
@@ -46,9 +50,15 @@ Route::get('/service', function () {
     return view('layout.service-single');
 });
 
+Route::get('/', function () {
+    return view('layout.frontpage-new');
+})->name('minipage');
+
 
 // en, id
 // Route::prefix('{lang}')->group(function() {
+//     Route::get('/')->name('homepage');
+
 //     Route::prefix('products')->controller()->name('products')->group(function() {
 //         Route::get('/')->name('index');
 //         Route::get('/{category}')->name('category');
