@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\TestimonialResource\Pages;
-use App\Filament\Resources\TestimonialResource\RelationManagers;
-use App\Models\Testimonial;
+use App\Filament\Resources\SupportResource\Pages;
+use App\Filament\Resources\SupportResource\RelationManagers;
+use App\Models\Post;
 use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
@@ -13,13 +13,15 @@ use Filament\Tables;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class TestimonialResource extends Resource
+class SupportResource extends Resource
 {
-    protected static ?string $model = Testimonial::class;
+    protected static ?string $model = Post::class;
 
     protected static ?string $navigationGroup = 'Marketing';
 
-    protected static ?string $navigationIcon = 'heroicon-o-annotation';
+    protected static ?string $navigationIcon = 'heroicon-o-support';
+
+    protected static ?string $navigationLabel = 'Supports';
 
     public static function form(Form $form): Form
     {
@@ -56,9 +58,9 @@ class TestimonialResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListTestimonials::route('/'),
-            'create' => Pages\CreateTestimonial::route('/create'),
-            'edit' => Pages\EditTestimonial::route('/{record}/edit'),
+            'index' => Pages\ListSupports::route('/'),
+            'create' => Pages\CreateSupport::route('/create'),
+            'edit' => Pages\EditSupport::route('/{record}/edit'),
         ];
     }
 }
