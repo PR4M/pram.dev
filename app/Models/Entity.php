@@ -29,9 +29,11 @@ class Entity extends Model
 
     // -- RELATIONSHIP -- //
 
-    /**
-     * Get all of the entity's translations.
-     */
+    public function testimonials()
+    {
+        return $this->hasMany(Testimonial::class, 'entity_id');
+    }
+
     public function translations()
     {
         return $this->morphMany(Translation::class, 'translationable');

@@ -121,10 +121,10 @@ class TestimonialResource extends Resource
 
                             switch ($state) {
                                 case 5: return '★★★★★';
-                                case 5: return '★★★★';
-                                case 5: return '★★★';
-                                case 5: return '★★';
-                                case 5: return '★';
+                                case 4: return '★★★★';
+                                case 3: return '★★★';
+                                case 2: return '★★';
+                                case 1: return '★';
                             }
 
                             // Only render the tooltip if the column contents exceeds the length limit.

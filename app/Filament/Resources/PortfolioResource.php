@@ -11,6 +11,7 @@ use Filament\Resources\Resource;
 use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\PortfolioResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use App\Filament\RelationManagers\TestimonialsRelationManager;
 use App\Filament\Resources\PortfolioResource\RelationManagers;
 
 class PortfolioResource extends Resource
@@ -55,7 +56,7 @@ class PortfolioResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            TestimonialsRelationManager::class,
         ];
     }
 
