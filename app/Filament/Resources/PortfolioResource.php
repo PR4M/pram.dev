@@ -17,6 +17,8 @@ class PortfolioResource extends Resource
 {
     protected static ?string $model = Entity::class;
 
+    protected static ?string $modelLabel = 'Portfolios';
+
     protected static ?string $slug = '/portfolios';
 
     protected static ?string $navigationGroup = 'Entity';

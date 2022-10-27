@@ -13,8 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('posts', function (Blueprint $table) {
-            $table->string('title');
+        Schema::table('entities', function (Blueprint $table) {
+            $table->unsignedInteger('total_orders')->default(0);
         });
     }
 
@@ -25,8 +25,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('posts', function (Blueprint $table) {
-            $table->dropColumn('title');
+        Schema::table('entities', function (Blueprint $table) {
+            $table->dropColumn('total_orders');
         });
     }
 };

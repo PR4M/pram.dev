@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('summary');
             $table->text('body');
-            $table->string('image');
+            $table->string('thumbnail');
 
             // price for single item licensing
             $table->decimal('price', 8, 2);

@@ -5,13 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Customer extends Model
+class Testimonial extends Model
 {
     use HasFactory;
 
-    protected $casts = [
-        'repeat_buyer' => 'boolean',
-    ];
-
     protected $guarded = [];
+
+    public function entity()
+    {
+        return $this->belongsTo(Entity::class, 'entity_id');
+    }
 }

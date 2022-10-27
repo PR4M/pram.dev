@@ -2,12 +2,40 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Entity extends Model
 {
     use HasFactory;
+
+    protected $guarded = [];
+
+    /**
+     * The "booted" method of the model.
+     *
+     * @return void
+     */
+    protected static function booted()
+    {
+        static::creating(function ($model) {
+            // append the slug with generated unique code
+            $code = Str::random(4);
+            $model->code = $code;
+            $model->slug = $model->slug . '-' . $code;
+        });
+    }
+
+    // -- RELATIONSHIP -- //
+
+    /**
+     * Get all of the entity's translations.
+     */
+    public function translations()
+    {
+        return $this->morphMany(Translation::class, 'translationable');
+    }
 
     // -- SCOPES -- //
 

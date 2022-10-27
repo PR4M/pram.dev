@@ -13,8 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('posts', function (Blueprint $table) {
-            $table->string('title');
+        Schema::table('testimonials', function (Blueprint $table) {
+            $table->string('source_url');
         });
     }
 
@@ -25,8 +25,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('posts', function (Blueprint $table) {
-            $table->dropColumn('title');
+        Schema::table('testimonials', function (Blueprint $table) {
+            $table->dropColumn('source_url');
         });
     }
 };

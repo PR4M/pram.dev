@@ -13,8 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('posts', function (Blueprint $table) {
-            $table->string('title');
+        Schema::table('customers', function (Blueprint $table) {
+            $table->string('alias');
+            $table->boolean('repeat_buyer')->default(false);
         });
     }
 
@@ -25,8 +26,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('posts', function (Blueprint $table) {
-            $table->dropColumn('title');
+        Schema::table('customers', function (Blueprint $table) {
+            $table->dropColumn(['alias', 'repeat_buyer']);
         });
     }
 };

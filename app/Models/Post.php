@@ -27,10 +27,6 @@ class Post extends Model
 
             $model->user_id = auth()->user()->id;
         });
-
-        static::updating(function($model) {
-            $model->slug = $model->slug . '-' . $model->code;
-        });
     }
 
     /**
@@ -39,6 +35,16 @@ class Post extends Model
     protected $casts = [
         'publish_at' => 'date',
     ];
+
+    // -- RELATIONSHIP -- //
+
+    /**
+     * Get all of the entity's translations.
+     */
+    public function translations()
+    {
+        return $this->morphMany(Translation::class, 'translationable');
+    }
 
     //
     public function author()

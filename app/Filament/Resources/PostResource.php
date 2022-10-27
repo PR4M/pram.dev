@@ -32,7 +32,7 @@ class PostResource extends Resource
                     ->schema([
                         Forms\Components\Card::make()
                             ->schema([
-                                Forms\Components\TextInput::make('name')
+                                Forms\Components\TextInput::make('title')
                                     ->required()
                                     ->lazy()
                                     ->afterStateUpdated(fn (string $context, $state, callable $set) => $context === 'create' ? $set('slug', Str::slug($state)) : null),
@@ -49,7 +49,7 @@ class PostResource extends Resource
                                     ->columnSpan('full'),
 
                                 Forms\Components\RichEditor::make('body')
-                                    ->fileAttachmentsDisk('local')
+                                    ->fileAttachmentsDisk('public')
                                     ->fileAttachmentsDirectory('attachments')
                                     ->fileAttachmentsVisibility('public')
                                     ->required()
@@ -81,7 +81,10 @@ class PostResource extends Resource
                             ])
                             ->collapsible(),
                     ])
-                    ->columnSpan(['lg' => fn (?Post $record) => $record === null ? 3 : 3]),
+                    ->columnSpan([
+                        'sm' => fn (?Post $record) => $record === null ? 3 : 3,
+                        'lg' => fn (?Post $record) => $record === null ? 3 : 3
+                    ]),
 
                 Forms\Components\Card::make()
                     ->schema([
@@ -113,7 +116,9 @@ class PostResource extends Resource
                 Tables\Columns\ImageColumn::make('thumbnail')
                     ->label('Thumbnail'),
 
-                Tables\Columns\TextColumn::make('name')
+                Tables\Columns\TextColumn::make('title')
+                    ->label('Title')
+                    ->wrap()
                     ->searchable()
                     ->sortable(),
 

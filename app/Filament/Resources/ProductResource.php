@@ -17,6 +17,8 @@ class ProductResource extends Resource
 {
     protected static ?string $model = Entity::class;
 
+    protected static ?string $modelLabel = 'Products';
+
     protected static ?string $slug = '/products';
 
     protected static ?string $navigationGroup = 'Entity';
