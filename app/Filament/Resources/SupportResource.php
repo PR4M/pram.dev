@@ -2,19 +2,22 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\SupportResource\Pages;
-use App\Filament\Resources\SupportResource\RelationManagers;
-use App\Models\Post;
 use Filament\Forms;
-use Filament\Resources\Form;
-use Filament\Resources\Resource;
-use Filament\Resources\Table;
+use App\Models\Post;
 use Filament\Tables;
+use Filament\Resources\Form;
+use Filament\Resources\Table;
+use Filament\Resources\Resource;
 use Illuminate\Database\Eloquent\Builder;
+use Filament\Resources\Concerns\Translatable;
+use App\Filament\Resources\SupportResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use App\Filament\Resources\SupportResource\RelationManagers;
 
 class SupportResource extends Resource
 {
+    use Translatable;
+
     protected static ?string $model = Post::class;
 
     protected static ?string $modelLabel = 'Supports';
@@ -66,5 +69,10 @@ class SupportResource extends Resource
             'create' => Pages\CreateSupport::route('/create'),
             'edit' => Pages\EditSupport::route('/{record}/edit'),
         ];
+    }
+
+    public static function getTranslatableLocales(): array
+    {
+        return ['en', 'id'];
     }
 }

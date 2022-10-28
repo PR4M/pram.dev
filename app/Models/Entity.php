@@ -4,13 +4,16 @@ namespace App\Models;
 
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
+use Spatie\Translatable\HasTranslations;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Entity extends Model
 {
-    use HasFactory;
+    use HasFactory, HasTranslations;
 
     protected $guarded = [];
+
+    public $translatable = ['title', 'summary', 'body'];
 
     /**
      * The "booted" method of the model.

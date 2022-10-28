@@ -21,8 +21,9 @@ return new class extends Migration
             // <question> is for those who just ask some questions for me
             $table->enum('intention', ['post', 'support', 'question']);
 
-            $table->string('summary');
+            $table->text('summary');
             $table->text('body');
+
             $table->string('thumbnail')->nullable();
 
             $table->unsignedBigInteger('user_id');

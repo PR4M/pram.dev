@@ -18,9 +18,10 @@ return new class extends Migration
 
             $table->enum('type', ['product', 'service', 'work']);
 
-            $table->string('title');
-            $table->string('summary');
+            $table->text('title');
+            $table->text('summary');
             $table->text('body');
+
             $table->string('thumbnail');
 
             // price for single item licensing

@@ -2,19 +2,23 @@
 
 namespace App\Filament\Resources;
 
+use Filament\Forms;
+use Filament\Tables;
+use App\Models\Testimonial;
+use Filament\Resources\Form;
+use Filament\Resources\Table;
+use Filament\Resources\Resource;
+use Filament\Notifications\Notification;
+use Illuminate\Database\Eloquent\Builder;
+use Filament\Resources\Concerns\Translatable;
+use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\TestimonialResource\Pages;
 use App\Filament\Resources\TestimonialResource\RelationManagers;
-use App\Models\Testimonial;
-use Filament\Forms;
-use Filament\Resources\Form;
-use Filament\Resources\Resource;
-use Filament\Resources\Table;
-use Filament\Tables;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class TestimonialResource extends Resource
 {
+    use Translatable;
+
     protected static ?string $model = Testimonial::class;
 
     protected static ?string $modelLabel = 'Testimonials';
@@ -179,5 +183,10 @@ class TestimonialResource extends Resource
             'create' => Pages\CreateTestimonial::route('/create'),
             'edit' => Pages\EditTestimonial::route('/{record}/edit'),
         ];
+    }
+
+    public static function getTranslatableLocales(): array
+    {
+        return ['en', 'id'];
     }
 }

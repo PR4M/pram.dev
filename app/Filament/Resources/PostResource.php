@@ -12,12 +12,15 @@ use Illuminate\Support\Carbon;
 use Filament\Resources\Resource;
 use Filament\Notifications\Notification;
 use Illuminate\Database\Eloquent\Builder;
+use Filament\Resources\Concerns\Translatable;
 use App\Filament\Resources\PostResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\PostResource\RelationManagers;
 
 class PostResource extends Resource
 {
+    use Translatable;
+
     protected static ?string $model = Post::class;
 
     protected static ?string $navigationGroup = 'Marketing';
@@ -203,5 +206,10 @@ class PostResource extends Resource
             'create' => Pages\CreatePost::route('/create'),
             'edit' => Pages\EditPost::route('/{record}/edit'),
         ];
+    }
+
+    public static function getTranslatableLocales(): array
+    {
+        return ['en', 'id'];
     }
 }

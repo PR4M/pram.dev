@@ -12,12 +12,15 @@ use Filament\Resources\Resource;
 use Filament\Forms\Components\TextInput;
 use Filament\Notifications\Notification;
 use Illuminate\Database\Eloquent\Builder;
+use Filament\Resources\Concerns\Translatable;
 use App\Filament\Resources\ServiceResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\RelationManagers\TestimonialsRelationManager;
 
 class ServiceResource extends Resource
 {
+    use Translatable;
+
     protected static ?string $model = Entity::class;
 
     protected static ?string $modelLabel = 'Services';
@@ -205,5 +208,10 @@ class ServiceResource extends Resource
             'create' => Pages\CreateService::route('/create'),
             'edit' => Pages\EditService::route('/{record}/edit'),
         ];
+    }
+
+    public static function getTranslatableLocales(): array
+    {
+        return ['en', 'id'];
     }
 }

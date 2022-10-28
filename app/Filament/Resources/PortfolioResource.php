@@ -9,6 +9,7 @@ use Filament\Resources\Form;
 use Filament\Resources\Table;
 use Filament\Resources\Resource;
 use Illuminate\Database\Eloquent\Builder;
+use Filament\Resources\Concerns\Translatable;
 use App\Filament\Resources\PortfolioResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\RelationManagers\TestimonialsRelationManager;
@@ -16,6 +17,8 @@ use App\Filament\Resources\PortfolioResource\RelationManagers;
 
 class PortfolioResource extends Resource
 {
+    use Translatable;
+
     protected static ?string $model = Entity::class;
 
     protected static ?string $modelLabel = 'Portfolios';
@@ -67,5 +70,10 @@ class PortfolioResource extends Resource
             'create' => Pages\CreatePortfolio::route('/create'),
             'edit' => Pages\EditPortfolio::route('/{record}/edit'),
         ];
+    }
+
+    public static function getTranslatableLocales(): array
+    {
+        return ['en', 'id'];
     }
 }

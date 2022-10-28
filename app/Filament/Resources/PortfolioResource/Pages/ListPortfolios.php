@@ -8,11 +8,14 @@ use Filament\Resources\Pages\ListRecords;
 
 class ListPortfolios extends ListRecords
 {
+    use ListRecords\Concerns\Translatable;
+
     protected static string $resource = PortfolioResource::class;
 
     protected function getActions(): array
     {
         return [
+            Actions\LocaleSwitcher::make(),
             Actions\CreateAction::make(),
         ];
     }
