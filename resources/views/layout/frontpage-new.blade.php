@@ -20,13 +20,13 @@
                 <div class="relative">
                     <p class="mb-2 text-base font-bold text-black uppercase">Ida Bagus Gede pramana adi putra</p>
                     <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl xl:text-6xl">
-                        <span class="block xl:inline">Design Smarter &amp;</span>
-                        <span class="block text-teal-500 xl:inline" data-primary="pink-500">Build Faster</span>
+                        <span class="block xl:inline">{{ __('homepage.intro') }}</span>
+                        <span class="block text-teal-500 xl:inline" data-primary="pink-500">{{ __('homepage.intro_subtitle') }}</span>
                     </h1>
                 </div>
-                <p class="my-8 text-lg text-gray-600 md:text-xl">Are you ready to see the magical awesomeness of these
-                    templates and components? Now, you can design smarter and build faster, converting your visitors
-                    into customers.</p>
+                <p class="my-8 text-lg text-gray-600 md:text-xl">
+                {{ __('homepage.intro_description') }}
+                </p>
                 <div class="relative flex items-center pt-4 space-x-3">
                     <a href="#_" class="relative text-2xl group">
                         <span
@@ -45,15 +45,17 @@
     </section>
 
     <!-- credibility -->
-    @include('components.credibility', ['tagline' => 'I built and launched these platforms'])
+    @include('components.credibility', ['tagline' => __('homepage.startups')])
 
     <!-- services -->
     <section class="relative w-full py-12 overflow-hidden  md:py-20 xl:pt-32 xl:pb-20">
         <div class="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0">
             <h2 class="mb-1 text-3xl font-extrabold tracking-wider text-gray-900">
-                Services Offer with Specialized Stacks
+                {{ __('homepage.services') }}
             </h2>
-            <p class="mb-12 text-lg text-gray-500">Here is a few of the awesome features we provide.</p>
+            <p class="mb-12 text-lg text-gray-500">
+                {{ __('homepage.services_description') }}
+            </p>
 
             <div class="flex w-full h-full">
 
@@ -246,9 +248,11 @@
     <section class="w-full py-12 overflow-hidden  md:py-20 xl:pt-16 xl:pb-40">
         <div class="container flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0">
             <h2 class="mb-1 text-3xl font-extrabold leading-tight text-gray-900">
-                Mind-born ideas & handcrafted products
+                {{ __('homepage.products') }}
             </h2>
-            <p class="mb-12 text-lg text-gray-500">Here is a few of the awesome features we provide.</p>
+            <p class="mb-12 text-lg text-gray-500">
+                {{ __('homepage.products_description') }}
+            </p>
 
             <div class="mt-1 grid grid-cols-1 gap-x-1 gap-y-8 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-3">
 
@@ -333,9 +337,11 @@
     <section class="w-full py-12 overflow-hidden bg-white md:py-20 xl:pt-16 xl:pb-20">
         <div class="container flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0">
             <h2 class="mb-1 text-3xl font-extrabold leading-tight text-gray-900">
-                Testimonials
+                {{ __('homepage.testimonials') }}
             </h2>
-            <p class="mb-8 text-lg text-gray-500">Review from those who have ordered my products or services.</p>
+            <p class="mb-8 text-lg text-gray-500">
+                {{ __('homepage.testimonials_description') }}
+            </p>
 
             <div class="mt-1 grid grid-cols-1 gap-x-1 gap-y-8 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-2">
 
@@ -397,9 +403,11 @@
     <section class="w-full py-12 overflow-hidden bg-white md:py-20 xl:pt-16 xl:pb-40">
         <div class="container flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0">
             <h2 class="mb-1 text-3xl font-sans font-extrabold leading-tight text-gray-900">
-                Toughts & Publications
+                {{ __('homepage.thoughts') }}
             </h2>
-            <p class="mb-8 text-lg text-gray-500">Here is a few of the awesome features we provide.</p>
+            <p class="mb-8 text-lg text-gray-500">
+                {{ __('homepage.thoughts_description') }}
+            </p>
 
             <div class="mt-2 grid gap-16 lg:grid-cols-2 lg:gap-x-5 lg:gap-y-12">
                 <div>
@@ -434,7 +442,7 @@
     <!-- footer -->
     <section class="relative border border-gray-200 bg-white">
         <div class="text-xs text-gray-400 space-y-4 border-b border-gray-200 relative">
-            <div class="max-w-6xl border-l border-r border-gray-200 py-6 relative h-full px-10 mx-auto flex flex-col sm:items-center sm:justify-between md:flex-row md:space-y-0">
+            <div class="max-w-6xl border-l border-r border-gray-200 py-6 relative h-full mx-auto flex flex-col sm:items-center sm:justify-between md:flex-row md:space-y-0">
                 <p class="md:mb-0 mb-1">Watch. Learn. Create.</p>
                 <div class="flex sm:flex-row flex-col items-start sm:items-center">
                     Visit our social channels<nav class="flex sm:ml-3 md:mt-0 mt-3 items-center space-x-3">
@@ -472,7 +480,7 @@
         </div>
         <div class="flex md:flex-row flex-col-reverse items-stretch border-l border-r border-gray-200 justify-center h-full mx-auto max-w-6xl md:space-x-10">
             <div
-                class="flex w-full md:w-1/2 flex-col sm:items-center justify-center space-y-5 p-10 md:pr-0 md:items-start">
+                class="flex w-full md:w-1/2 flex-col sm:items-center justify-center space-y-5  md:pr-0 md:items-start">
                 <a href="#_" class="text-gray-900 font-extrabold uppercase text- flex items-center">
                     <svg class="w-7 h-auto text-purple-600 mr-3" viewBox="0 0 100 100"
                         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -522,10 +530,10 @@
                 </div>
             </div>
         </div>
-        <div class="text-xs text-gray-400 space-y-4 border-t border-gray-200">
+        <div class="text-xs text-gray-500 space-y-4 border-t border-gray-200">
             <div
-                class="max-w-6xl border-l border-r border-gray-200 py-6 h-full px-10 mx-auto flex flex-col sm:items-center sm:justify-between md:flex-row md:space-y-0">
-                <p>© 2022 Company Name</p>
+                class="max-w-6xl border-l border-r border-gray-200 py-6 h-full mx-auto flex flex-col sm:items-center sm:justify-between md:flex-row md:space-y-0">
+                <p>© 2022 Pram.Dev by Ida Bagus Gede Pramana Adi Putra</p>
                 <nav class="flex flex-col space-y-1.5 md:mt-0 mt-4 sm:flex-row sm:space-y-0 sm:space-x-3">
                     <a href="#" class="transition hover:text-gray-900">Terms of Service</a>
                     <a href="#" class="transition hover:text-gray-900">Privacy Policy</a>
