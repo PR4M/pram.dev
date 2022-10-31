@@ -54,7 +54,6 @@ class ServiceResource extends Resource
                                 Forms\Components\TextArea::make('summary')
                                     ->required()
                                     ->rows(3)
-                                    ->afterStateUpdated(fn (string $context, $state, callable $set) => $context === 'create' ? $set('slug', Str::slug($state)) : null)
                                     ->columnSpan('full'),
 
                                 Forms\Components\RichEditor::make('body')

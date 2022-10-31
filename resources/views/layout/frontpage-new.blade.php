@@ -18,13 +18,13 @@
 
             <div class="flex flex-col items-start justify-center w-full pr-10 mb-12 lg:w-1/2 lg:mb-0">
                 <div class="relative">
-                    <p class="mb-2 text-base font-bold text-black uppercase">Ida Bagus Gede pramana adi putra</p>
-                    <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl xl:text-6xl">
+                    <p class="mb-2 text-transparent bg-clip-text font-bold bg-gradient-to-r from-green-400 via-blue-500 to-purple-500 uppercase">Ida Bagus Gede pramana adi putra</p>
+                    <h1 class="text-4xl font-title font-extrabold tracking-tight text-gray-900 sm:text-5xl xl:text-6xl">
                         <span class="block xl:inline">{{ __('homepage.intro') }}</span>
                         <span class="block text-teal-500 xl:inline" data-primary="pink-500">{{ __('homepage.intro_subtitle') }}</span>
                     </h1>
                 </div>
-                <p class="my-8 text-lg text-gray-600 md:text-xl">
+                <p class="my-8 text-sm font-description text-gray-600 md:text-lg">
                 {{ __('homepage.intro_description') }}
                 </p>
                 <div class="relative flex items-center pt-4 space-x-3">
@@ -50,10 +50,10 @@
     <!-- services -->
     <section class="relative w-full py-12 overflow-hidden  md:py-20 xl:pt-32 xl:pb-20">
         <div class="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0">
-            <h2 class="mb-1 text-3xl font-extrabold tracking-wider text-gray-900">
+            <h2 class="mb-1 text-3xl font-title font-extrabold tracking-wider text-gray-900">
                 {{ __('homepage.services') }}
             </h2>
-            <p class="mb-12 text-lg text-gray-500">
+            <p class="mb-12 text-lg font-description text-gray-500">
                 {{ __('homepage.services_description') }}
             </p>
 
@@ -247,10 +247,10 @@
     <!-- products -->
     <section class="w-full py-12 overflow-hidden  md:py-20 xl:pt-16 xl:pb-40">
         <div class="container flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0">
-            <h2 class="mb-1 text-3xl font-extrabold leading-tight text-gray-900">
+            <h2 class="mb-1 text-3xl font-title font-extrabold tracking-wider text-gray-900">
                 {{ __('homepage.products') }}
             </h2>
-            <p class="mb-12 text-lg text-gray-500">
+            <p class="mb-12 text-lg font-description text-gray-500">
                 {{ __('homepage.products_description') }}
             </p>
 
@@ -336,10 +336,10 @@
     <!-- testimonials -->
     <section class="w-full py-12 overflow-hidden bg-white md:py-20 xl:pt-16 xl:pb-20">
         <div class="container flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0">
-            <h2 class="mb-1 text-3xl font-extrabold leading-tight text-gray-900">
+            <h2 class="mb-1 text-3xl font-title font-extrabold leading-tight text-gray-900">
                 {{ __('homepage.testimonials') }}
             </h2>
-            <p class="mb-8 text-lg text-gray-500">
+            <p class="mb-8 text-lg font-description text-gray-500">
                 {{ __('homepage.testimonials_description') }}
             </p>
 
@@ -402,10 +402,10 @@
     <!-- publications -->
     <section class="w-full py-12 overflow-hidden bg-white md:py-20 xl:pt-16 xl:pb-40">
         <div class="container flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0">
-            <h2 class="mb-1 text-3xl font-sans font-extrabold leading-tight text-gray-900">
+            <h2 class="mb-1 text-3xl font-title font-extrabold leading-tight text-gray-900">
                 {{ __('homepage.thoughts') }}
             </h2>
-            <p class="mb-8 text-lg text-gray-500">
+            <p class="mb-8 text-lg font-description text-gray-500">
                 {{ __('homepage.thoughts_description') }}
             </p>
 

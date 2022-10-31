@@ -41,13 +41,16 @@ Route::get('/services-old', function () {
     return view('layout.services');
 });
 
-
 Route::get('/service-detail', function () {
     return view('layout.service-detail');
 });
 
-Route::get('/service', function () {
-    return view('layout.service-single');
+Route::get('/services', function () {
+    return view('layout.services-new');
+});
+
+Route::get('/blog', function () {
+    return view('layout.publication');
 });
 
 Route::get('/', function () {

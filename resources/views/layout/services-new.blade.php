@@ -20,8 +20,13 @@
 
                 <div class="px-10 mx-auto max-w-7xl">
                     <div class="w-full mx-auto text-left md:text-center">
-                        <h1 class="mb-6 text-5xl font-extrabold leading-none max-w-5xl mx-auto tracking-normal text-gray-900 sm:text-6xl md:text-6xl lg:text-7xl md:tracking-tight"> The <span class="w-full text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-500 to-purple-500 lg:inline">Number One Source</span> for<br class="lg:block hidden"> all your design needs. </h1>
-                        <p class="px-0 text-lg text-gray-600 md:text-xl lg:px-24"> Say hello to the number one source for all your design needs. Drag and drop designs, edit designs, and modify the components to help tell your story. </p>
+                        <h1 class="font-title mb-6 text-4xl font-extrabold leading-none max-w-5xl mx-auto tracking-normal text-gray-900 sm:text-6xl md:text-6xl lg:text-7xl md:tracking-tight">
+                            {{ __('servicespage.intro_prefix') }} <span class="w-full text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-500 to-purple-500 lg:inline">{{ __('servicespage.intro') }}</span>
+                            {{ __('servicespage.intro_postix') }}<br class="lg:block hidden"> {{ __('servicespage.intro_subtitle') }}
+                        </h1>
+                        <p class="font-description px-0 text-lg text-gray-500 md:text-xl lg:px-24">
+                            {{ __('servicespage.intro_description') }}
+                        </p>
                     </div>
                 </div>
 
@@ -48,146 +53,212 @@
     </section>
 
     <!-- credibility -->
-    @include('components.credibility', ['tagline' => 'These services brought to you by the maker of'])
+    @include('components.credibility', ['tagline' => __('servicespage.startups')])
 
     <!-- services -->
     <section class="bg-white pt-4 pb-20 px-4 sm:px-6 lg:pt-4 lg:pb-28 lg:px-8">
         <div class="max-w-2xl mx-auto py-4 px-4 sm:py-6 sm:px-6 lg:max-w-7xl lg:px-8">
-            <div class="mt-6 grid grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-1">
+            <div class="mt-6 grid grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-2">
 
-                <div class="p-6 bg-white sm:p-8 rounded-xl ring ring-indigo-50">
-                    <div class="flex items-start">
-                        <div class="hidden sm:grid sm:h-20 sm:w-20 sm:shrink-0 sm:place-content-center sm:rounded-full sm:border-2 sm:border-indigo-500"aria-hidden="true">
-                            <div class="flex items-center gap-1">
-                                <span class="h-8 w-0.5 rounded-full bg-indigo-500"></span>
-                                <span class="h-6 w-0.5 rounded-full bg-indigo-500"></span>
-                                <span class="h-4 w-0.5 rounded-full bg-indigo-500"></span>
-                                <span class="h-6 w-0.5 rounded-full bg-indigo-500"></span>
-                                <span class="h-8 w-0.5 rounded-full bg-indigo-500"></span>
-                            </div>
+                <a href="#" class="relative block shadow-md overflow-hidden rounded-lg border border-gray-100 p-8">
+                    <span class="absolute inset-x-0 bottom-0 h-2 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600"></span>
+
+                    <div class="justify-between sm:flex">
+                        <div>
+                            <h3 class="text-xl font-title font-bold text-gray-900">
+                                Migrasi Website dari server lama ke server baru (Shared Hosting, VPS, Dedicated)
+                            </h3>
+
+                            <p class="mt-1 text-xs font-medium text-gray-600">By Ida Bagus Gede Pramana Adi Putra</p>
                         </div>
 
-                        <div class="sm:ml-8">
-                            <strong class="rounded border border-indigo-500 bg-indigo-500 px-3 py-1.5 text-[10px] font-medium text-white">
-                                Episode #101
-                            </strong>
-
-                            <h2 class="mt-4 text-lg font-medium sm:text-xl">
-                                <a href="" class="hover:underline"> Full-stack Website Development </a>
-                            </h2>
-
-                            <p class="mt-1 text-sm text-gray-700">
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam nulla
-                                amet voluptatum sit rerum, atque, quo culpa ut necessitatibus eius
-                                suscipit eum accusamus, aperiam voluptas exercitationem facere aliquid
-                                fuga. Sint.
-                            </p>
-
-                            <div class="mt-4 sm:flex sm:items-center sm:gap-2">
-                                <div class="flex items-center text-gray-500">
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                                    ></path>
-                                    </svg>
-                                    <p class="ml-1 text-xs font-medium">48:32 minutes</p>
-                                </div>
-
-                                <span class="hidden sm:block" aria-hidden="true">&middot;</span>
-
-                                <p class="mt-2 text-xs font-medium text-gray-500 sm:mt-0">
-                                    Featuring <a href="" class="underline hover:text-gray-700">Barry</a>,
-                                    <a href="" class="underline hover:text-gray-700">Sandra</a> and
-                                    <a href="" class="underline hover:text-gray-700">August</a>
-                                </p>
-                            </div>
+                        <div class="ml-3 hidden flex-shrink-0 sm:block">
+                            <img
+                                alt="Paul Clapton"
+                                src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80"
+                                class="h-16 w-16 rounded-lg object-cover shadow-sm"
+                            />
                         </div>
                     </div>
-                </div>
+
+                    <div class="mt-4 sm:pr-8">
+                        <p class="text-sm text-gray-600">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. At velit illum
+                            provident a, ipsa maiores deleniti consectetur nobis et eaque.
+                        </p>
+                    </div>
+
+                    <dl class="mt-6 flex">
+                        <div class="flex flex-col-reverse">
+                            <dt class="text-sm font-medium text-gray-600">5 USD / website</dt>
+                            <dd class="text-xs text-gray-500">Dimulai dari</dd>
+                        </div>
+
+                        <div class="ml-3 flex flex-col-reverse sm:ml-6">
+                            <dt class="text-sm font-medium text-gray-600">1 - 8 jam</dt>
+                            <dd class="text-xs text-gray-500">Durasi pengerjaan</dd>
+                        </div>
+
+                        <div class="ml-3 flex flex-col-reverse sm:ml-6">
+                            <dt class="text-sm font-medium text-gray-600">15 kali</dt>
+                            <dd class="text-xs text-gray-500">Jumlah pegerjaan</dd>
+                        </div>
+                    </dl>
+                </a>
+
+                <a href="#" class="relative block shadow-md overflow-hidden rounded-lg border border-gray-100 p-8">
+                    <span class="absolute inset-x-0 bottom-0 h-2 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600"></span>
+
+                    <div class="justify-between sm:flex">
+                        <div>
+                            <h3 class="text-xl font-title font-bold text-gray-900">
+                                Pembuatan aplikasi komplit dengan PHP/Laravel (TALL Stack)
+                            </h3>
+
+                            <p class="mt-1 text-xs font-medium text-gray-600">By Ida Bagus Gede Pramana Adi Putra</p>
+                        </div>
+
+                        <div class="ml-3 hidden flex-shrink-0 sm:block">
+                            <img
+                                alt="Paul Clapton"
+                                src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80"
+                                class="h-16 w-16 rounded-lg object-cover shadow-sm"
+                            />
+                        </div>
+                    </div>
+
+                    <div class="mt-4 sm:pr-8">
+                        <p class="text-sm text-gray-600">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. At velit illum
+                            provident a, ipsa maiores deleniti consectetur nobis et eaque.
+                        </p>
+                    </div>
+
+                    <dl class="mt-6 flex">
+                        <div class="flex flex-col-reverse">
+                            <dt class="text-sm font-medium text-gray-600">20 USD / website</dt>
+                            <dd class="text-xs text-gray-500">Dimulai dari</dd>
+                        </div>
+
+                        <div class="ml-3 flex flex-col-reverse sm:ml-6">
+                            <dt class="text-sm font-medium text-gray-600">1 - 8 jam</dt>
+                            <dd class="text-xs text-gray-500">Durasi pengerjaan</dd>
+                        </div>
+
+                        <div class="ml-3 flex flex-col-reverse sm:ml-6">
+                            <dt class="text-sm font-medium text-gray-600">15 kali</dt>
+                            <dd class="text-xs text-gray-500">Jumlah pegerjaan</dd>
+                        </div>
+                    </dl>
+                </a>
 
             </div>
         </div>
     </section>
 
     <!-- FAQS -->
-    <section class="py-12 bg-white sm:py-16 md:py-20 lg:py-24 tails-selected-element" data-tails-scripts="//unpkg.com/alpinejs" contenteditable="true">
-        <div class="max-w-6xl px-8 mx-auto lg:px-16">
-            <h2 class="mb-2 text-2xl font-bold md:text-3xl">Got a Question?</h2>
-            <p class="mb-4 text-sm text-gray-600 sm:text-base md:text-lg">We may have an answer for you. Here are some of our common FAQ's:</p>
+    <section class="py-12 bg-gray-50 sm:py-10 md:py-12 lg:py-14 xl:py-16">
+        <div class="max-w-6xl px-4 mx-auto lg:px-8">
+            <h2 class="font-title mb-2 text-2xl font-bold md:text-3xl">{{ __("productspage.faqs?") }}</h2>
+            <p class="font-description mb-4 text-sm text-gray-600 sm:text-base md:text-lg">{{ __('productspage.faqs_description') }}:</p>
 
-            <div class="relative mt-2">
-                <!-- Question 1 -->
-                <div x-data="{ show: false }" class="relative overflow-hidden border-b-2 border-black select-none">
-                    <h4 @click="show=!show" class="flex items-center justify-start text-lg font-medium text-gray-700 cursor-pointer sm:text-xl md:text-2xl py-7 hover:text-gray-900">
-                        <svg class="w-6 h-6 mr-3 transition-all duration-200 ease-out transform rotate-0 -rotate-90" :class="{ '-rotate-90' : !show }" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" class=""></path></svg>
-                        <span class="">Where do I go to upgrade my account?</span>
-                    </h4>
-                    <p class="px-2 pt-0 -mt-2 text-sm text-gray-400 sm:text-base md:text-lg py-7" x-transition:enter="transition-all ease-out duration-300" x-transition:enter-start="opacity-0 transform -translate-y-4" x-transition:enter-end="opacity-100 transform -translate-y-0" x-transition:leave="transition-all ease-out hidden duration-200" x-transition:leave-start="opacity-100 transform -translate-y-0" x-transition:leave-end="opacity-0 transform -translate-y-4" x-show="show" style="display: none;">You can upgrade your account by visiting The Pro Upgrade Page. You will also gain access to many other applications and sections of the site.</p>
+            <div class="relative flex flex-col mt-2 lg:flex-row">
+
+                <!-- Left side of FAQs -->
+                <div class="relative w-full lg:w-1/2 lg:pr-12">
+                    <!-- Question 1 -->
+                    <div x-data="{ show: false }" class="relative overflow-hidden text-gray-700 select-none">
+                        <h4 @click="show=!show" class="flex items-center justify-between py-4 text-lg font-medium text-gray-600 cursor-pointer sm:text-xl hover:text-black">
+                            <span>Where do I go to upgrade my account?</span>
+                            <svg class="w-6 h-6 mr-2 transition-all duration-200 ease-out transform rotate-0" :class="{ '-rotate-180' : show }" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" class=""></path></svg>
+                        </h4>
+                        <p class="px-1 pt-0 mt-1 text-gray-600 sm:text-lg py-7" x-transition:enter="transition-all ease-out duration-300" x-transition:enter-start="opacity-0 transform -translate-y-4" x-transition:enter-end="opacity-100 transform -translate-y-0" x-transition:leave="transition-all ease-out hidden duration-200" x-transition:leave-start="opacity-100 transform -translate-y-0" x-transition:leave-end="opacity-0 transform -translate-y-4" x-show="show" style="display: none;">You can upgrade your account by visiting The Pro Upgrade Page. You will also gain access to many other applications and sections of the site.</p>
+                    </div>
+
+                    <!-- Question 1 -->
+                    <div x-data="{ show: false }" class="relative overflow-hidden text-gray-700 select-none">
+                        <h4 @click="show=!show" class="flex items-center justify-between py-4 text-lg font-medium text-gray-600 cursor-pointer sm:text-xl hover:text-black">
+                            <span>Where do I go to upgrade my account?</span>
+                            <svg class="w-6 h-6 mr-2 transition-all duration-200 ease-out transform rotate-0" :class="{ '-rotate-180' : show }" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" class=""></path></svg>
+                        </h4>
+                        <p class="px-1 pt-0 mt-1 text-gray-600 sm:text-lg py-7" x-transition:enter="transition-all ease-out duration-300" x-transition:enter-start="opacity-0 transform -translate-y-4" x-transition:enter-end="opacity-100 transform -translate-y-0" x-transition:leave="transition-all ease-out hidden duration-200" x-transition:leave-start="opacity-100 transform -translate-y-0" x-transition:leave-end="opacity-0 transform -translate-y-4" x-show="show" style="display: none;">You can upgrade your account by visiting The Pro Upgrade Page. You will also gain access to many other applications and sections of the site.</p>
+                    </div>
+
+                    <!-- Question 1 -->
+                    <div x-data="{ show: false }" class="relative overflow-hidden text-gray-700 select-none">
+                        <h4 @click="show=!show" class="flex items-center justify-between py-4 text-lg font-medium text-gray-600 cursor-pointer sm:text-xl hover:text-black">
+                            <span>Where do I go to upgrade my account?</span>
+                            <svg class="w-6 h-6 mr-2 transition-all duration-200 ease-out transform rotate-0" :class="{ '-rotate-180' : show }" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" class=""></path></svg>
+                        </h4>
+                        <p class="px-1 pt-0 mt-1 text-gray-600 sm:text-lg py-7" x-transition:enter="transition-all ease-out duration-300" x-transition:enter-start="opacity-0 transform -translate-y-4" x-transition:enter-end="opacity-100 transform -translate-y-0" x-transition:leave="transition-all ease-out hidden duration-200" x-transition:leave-start="opacity-100 transform -translate-y-0" x-transition:leave-end="opacity-0 transform -translate-y-4" x-show="show" style="display: none;">You can upgrade your account by visiting The Pro Upgrade Page. You will also gain access to many other applications and sections of the site.</p>
+                    </div>
                 </div>
 
-                <!-- Question 2 -->
-                <div x-data="{ show: false }" class="relative overflow-hidden border-b-2 border-black select-none">
-                    <h4 @click="show=!show" class="flex items-center justify-start text-lg font-medium text-gray-700 cursor-pointer sm:text-xl md:text-2xl py-7 hover:text-gray-900">
-                        <svg class="w-6 h-6 mr-3 transition-all duration-200 ease-out transform rotate-0 -rotate-90" :class="{ '-rotate-90' : !show }" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        <span class="">How do I use Tails in my project?</span>
-                    </h4>
-                    <p class="px-2 pt-0 -mt-2 text-sm text-gray-400 sm:text-base md:text-lg py-7" x-transition:enter="transition-all ease-out duration-300" x-transition:enter-start="opacity-0 transform -translate-y-4" x-transition:enter-end="opacity-100 transform -translate-y-0" x-transition:leave="transition-all ease-out hidden duration-200" x-transition:leave-start="opacity-100 transform -translate-y-0" x-transition:leave-end="opacity-0 transform -translate-y-4" x-show="show" style="display: none;">Implementation in your project is very simple. You can use the exported page as a starting point, or you can copy and paste the HTML into your own page.</p>
+
+                <!-- Right side of FAQs -->
+                <div class="relative w-full lg:w-1/2 lg:pl-12">
+
+                    <!-- Question 1 -->
+                    <div x-data="{ show: false }" class="relative overflow-hidden text-gray-700 select-none">
+                        <h4 @click="show=!show" class="flex items-center justify-between py-4 text-lg font-medium text-gray-600 cursor-pointer sm:text-xl hover:text-black">
+                            <span>Where do I go to upgrade my account?</span>
+                            <svg class="w-6 h-6 mr-2 transition-all duration-200 ease-out transform rotate-0" :class="{ '-rotate-180' : show }" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" class=""></path></svg>
+                        </h4>
+                        <p class="px-1 pt-0 mt-1 text-gray-600 sm:text-lg py-7" x-transition:enter="transition-all ease-out duration-300" x-transition:enter-start="opacity-0 transform -translate-y-4" x-transition:enter-end="opacity-100 transform -translate-y-0" x-transition:leave="transition-all ease-out hidden duration-200" x-transition:leave-start="opacity-100 transform -translate-y-0" x-transition:leave-end="opacity-0 transform -translate-y-4" x-show="show" style="display: none;">You can upgrade your account by visiting The Pro Upgrade Page. You will also gain access to many other applications and sections of the site.</p>
+                    </div>
+
+                    <!-- Question 1 -->
+                    <div x-data="{ show: false }" class="relative overflow-hidden text-gray-700 select-none">
+                        <h4 @click="show=!show" class="flex items-center justify-between py-4 text-lg font-medium text-gray-600 cursor-pointer sm:text-xl hover:text-black">
+                            <span>Where do I go to upgrade my account?</span>
+                            <svg class="w-6 h-6 mr-2 transition-all duration-200 ease-out transform rotate-0" :class="{ '-rotate-180' : show }" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" class=""></path></svg>
+                        </h4>
+                        <p class="px-1 pt-0 mt-1 text-gray-600 sm:text-lg py-7" x-transition:enter="transition-all ease-out duration-300" x-transition:enter-start="opacity-0 transform -translate-y-4" x-transition:enter-end="opacity-100 transform -translate-y-0" x-transition:leave="transition-all ease-out hidden duration-200" x-transition:leave-start="opacity-100 transform -translate-y-0" x-transition:leave-end="opacity-0 transform -translate-y-4" x-show="show" style="display: none;">You can upgrade your account by visiting The Pro Upgrade Page. You will also gain access to many other applications and sections of the site.</p>
+                    </div>
+
+                    <!-- Question 1 -->
+                    <div x-data="{ show: false }" class="relative overflow-hidden text-gray-700 select-none">
+                        <h4 @click="show=!show" class="flex items-center justify-between py-4 text-lg font-medium text-gray-600 cursor-pointer sm:text-xl hover:text-black">
+                            <span>Where do I go to upgrade my account?</span>
+                            <svg class="w-6 h-6 mr-2 transition-all duration-200 ease-out transform rotate-0" :class="{ '-rotate-180' : show }" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" class=""></path></svg>
+                        </h4>
+                        <p class="px-1 pt-0 mt-1 text-gray-600 sm:text-lg py-7" x-transition:enter="transition-all ease-out duration-300" x-transition:enter-start="opacity-0 transform -translate-y-4" x-transition:enter-end="opacity-100 transform -translate-y-0" x-transition:leave="transition-all ease-out hidden duration-200" x-transition:leave-start="opacity-100 transform -translate-y-0" x-transition:leave-end="opacity-0 transform -translate-y-4" x-show="show" style="display: none;">You can upgrade your account by visiting The Pro Upgrade Page. You will also gain access to many other applications and sections of the site.</p>
+                    </div>
+
                 </div>
 
-                <!-- Question 3 -->
-                <div x-data="{ show: false }" class="relative overflow-hidden border-b-2 border-black select-none">
-                    <h4 @click="show=!show" class="flex items-center justify-start text-lg font-medium text-gray-700 cursor-pointer sm:text-xl md:text-2xl py-7 hover:text-gray-900">
-                        <svg class="w-6 h-6 mr-3 transition-all duration-200 ease-out transform rotate-0 -rotate-90" :class="{ '-rotate-90' : !show }" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        <span class="">How long will I have access to Tails?</span>
-                    </h4>
-                    <p class="px-2 pt-0 -mt-2 text-sm text-gray-400 sm:text-base md:text-lg py-7" x-transition:enter="transition-all ease-out duration-300" x-transition:enter-start="opacity-0 transform -translate-y-4" x-transition:enter-end="opacity-100 transform -translate-y-0" x-transition:leave="transition-all ease-out hidden duration-200" x-transition:leave-start="opacity-100 transform -translate-y-0" x-transition:leave-end="opacity-0 transform -translate-y-4" x-show="show" style="display: none;">You will have unlimited access to all your pre-built pages; however, if you want to be able to download and export your pages, you'll need a pro account. Paddle for processing payments.</p>
-                </div>
 
-                <!-- Question 4 -->
-                <div x-data="{ show: false }" class="relative overflow-hidden border-b-2 border-black select-none">
-                    <h4 @click="show=!show" class="flex items-center justify-start text-lg font-medium text-gray-700 cursor-pointer sm:text-xl md:text-2xl py-7 hover:text-gray-900">
-                        <svg class="w-6 h-6 mr-3 transition-all duration-200 ease-out transform rotate-0 -rotate-90" :class="{ '-rotate-90' : !show }" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        <span>What is the license on the pages?</span>
-                    </h4>
-                    <p class="px-2 pt-0 -mt-2 text-sm text-gray-400 sm:text-base md:text-lg py-7" x-transition:enter="transition-all ease-out duration-300" x-transition:enter-start="opacity-0 transform -translate-y-4" x-transition:enter-end="opacity-100 transform -translate-y-0" x-transition:leave="transition-all ease-out hidden duration-200" x-transition:leave-start="opacity-100 transform -translate-y-0" x-transition:leave-end="opacity-0 transform -translate-y-4" x-show="show" style="display: none;">You have unlimited use to the templates used in Tails; however, you cannot re-use the templates to sell for others to use.</p>
-                </div>
-
-                <!-- Question 5 -->
-                <div x-data="{ show: false }" class="relative overflow-hidden select-none">
-                    <h4 @click="show=!show" class="flex items-center justify-start text-lg font-medium text-gray-700 cursor-pointer sm:text-xl md:text-2xl py-7 hover:text-gray-900">
-                        <svg class="w-6 h-6 mr-3 transition-all duration-200 ease-out transform rotate-0 -rotate-90" :class="{ '-rotate-90' : !show }" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        <span>What if I need help with my project?</span>
-                    </h4>
-                    <p class="px-2 pt-0 -mt-2 text-sm text-gray-400 sm:text-base md:text-lg py-7" x-transition:enter="transition-all ease-out duration-300" x-transition:enter-start="opacity-0 transform -translate-y-4" x-transition:enter-end="opacity-100 transform -translate-y-0" x-transition:leave="transition-all ease-out hidden duration-200" x-transition:leave-start="opacity-100 transform -translate-y-0" x-transition:leave-end="opacity-0 transform -translate-y-4" x-show="show" style="display: none;">If you need assistance implementing the templates into your project you can contact support or you can visit our question section.</p>
-                </div>
             </div>
-
         </div>
     </section>
 
     <!-- Trustworthy -->
     <section class="py-20 bg-gray-50 tails-selected-element" contenteditable="true">
-        <div class="container items-center max-w-6xl px-4 px-10 mx-auto sm:px-20 md:px-32 lg:px-16">
+        <div class="container items-center max-w-6xl px-4 mx-auto sm:px-2 md:px-4 lg:px-10">
           <div class="flex flex-wrap items-center -mx-3">
             <div class="order-1 w-full px-3 lg:w-1/2 lg:order-0">
               <div class="w-full lg:max-w-md">
-                <h2 class="mb-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl font-heading">Jam-packed with all the tools you need to succeed!</h2>
-                <p class="mb-4 font-medium tracking-tight text-gray-400 xl:mb-6">It's never been easier to build a business of your own. Our tools will help you with the following:</p>
+                <h2 class="mb-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl font-title">
+                    {{ __('productspage.trustworthy') }}
+                </h2>
+                <p class="mb-2 font-medium tracking-tight text-gray-600 xl:mb-6 font-description">
+                    {{ __('productspage.trustworthy_description') }}
+                </p>
+                <p class="mb-2 font-medium tracking-tight text-gray-600 xl:mb-6 font-description">
+                    {{ __('productspage.trustworthy_description_2') }}
+                </p>
                 <ul>
                   <li class="flex items-center py-2 space-x-4 xl:py-3">
-                    <svg class="w-8 h-8 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
-                    <span class="font-medium text-gray-500">Faster Processing and Delivery</span>
+                    <svg class="w-9 h-9 text-green-500" width="32" height="32" viewBox="0 0 256 256"><path fill="currentColor" d="M216 64h-40v-8a24.1 24.1 0 0 0-24-24h-48a24.1 24.1 0 0 0-24 24v8H40a16 16 0 0 0-16 16v128a16 16 0 0 0 16 16h176a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16ZM40 120h176v48H40Zm56-64a8 8 0 0 1 8-8h48a8 8 0 0 1 8 8v8H96Zm120 24v24H40V80Zm0 128H40v-24h176v24Z"/></svg>
+                    <span class="font-title text-sm font-medium text-gray-500">{{ __('productspage.trustworthy_line_1') }}</span>
                   </li>
                   <li class="flex items-center py-2 space-x-4 xl:py-3">
-                    <svg class="w-8 h-8 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
-                    <span class="font-medium text-gray-500">Out of the Box Tracking and Monitoring</span>
+                    <svg class="w-8 h-8 text-green-500" width="32" height="32" viewBox="0 0 256 256"><path fill="currentColor" d="M176 232a8 8 0 0 1-8 8H88a8 8 0 0 1 0-16h80a8 8 0 0 1 8 8Zm40-128a87.7 87.7 0 0 1-33.6 69.2A16.1 16.1 0 0 0 176 186v6a16 16 0 0 1-16 16H96a16 16 0 0 1-16-16v-6a16.2 16.2 0 0 0-6.2-12.7A87.8 87.8 0 0 1 40 104.5c-.3-47.7 38.3-87.4 85.9-88.5a87.9 87.9 0 0 1 90.1 88Zm-16 0a72.1 72.1 0 0 0-73.7-72c-39 .9-70.5 33.4-70.3 72.4a71.7 71.7 0 0 0 27.6 56.3A32 32 0 0 1 96 186v6h24v-44.7l-29.7-29.6a8.1 8.1 0 0 1 11.4-11.4l26.3 26.4l26.3-26.4a8.1 8.1 0 0 1 11.4 11.4L136 147.3V192h24v-6a32.1 32.1 0 0 1 12.5-25.4A71.5 71.5 0 0 0 200 104Z"/></svg>
+                    <span class="font-title text-sm font-medium text-gray-500">{{ __('productspage.trustworthy_line_2') }}</span>
                   </li>
                   <li class="flex items-center py-2 space-x-4 xl:py-3">
                     <svg class="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-                    <span class="font-medium text-gray-500">100% Protection and Security for Your App</span>
+                    <span class="font-title text-sm font-medium text-gray-500">{{ __('productspage.trustworthy_line_3') }}</span>
                   </li>
                 </ul>
               </div>

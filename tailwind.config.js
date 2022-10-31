@@ -6,6 +6,10 @@ module.exports = {
       "./resources/**/*.vue",
     ],
     theme: {
+      fontFamily: {
+        'title': ['Varela Round'],
+        'description': ['DM Sans']
+      },
       extend: {},
     },
     plugins: [
