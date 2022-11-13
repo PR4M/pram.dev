@@ -1,4 +1,4 @@
-<section class="relative py-2 bg-white">
+<section class="relative py-2 bg-white dark:bg-slate-800">
     <div class="flex items-center justify-between h-20 px-8 mx-auto max-w-6xl md:px-8 md:mx-auto md:w-screen">
 
         <a href="#_"

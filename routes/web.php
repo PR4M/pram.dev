@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,46 +18,25 @@ Route::get('/', function () {
     return view('layout.frontpage-new');
 });
 
-// Route::get('/{lang}', function ($val) {
-//     dd($val);
-// });
-
-Route::get('/products', function () {
-    return view('layout.products-new');
+Route::prefix('products')->controller(PageController::class)->name('products.')->group(function() {
+    Route::get('/', 'pageProducts')->name('index');
+    Route::get('/{entity}', 'pageProductOverview')->name('overview');
 });
 
-Route::get('/product-detail', function () {
-    return view('layout.product-single-new');
+Route::prefix('services')->controller(PageController::class)->name('services.')->group(function() {
+    Route::get('/', 'pageServices')->name('index');
+    Route::get('/{entity}', 'pageServiceOverview')->name('overview');
 });
 
-Route::get('/product-detail-old', function () {
-    return view('layout.product-single');
+Route::prefix('works')->controller(PageController::class)->name('works.')->group(function() {
+    Route::get('/', 'pageWorks')->name('index');
+    Route::get('/{entity}', 'pageWorkOverview')->name('overview');
 });
 
-Route::get('/services', function () {
-    return view('layout.services-new');
+Route::prefix('blog')->controller(PageController::class)->name('blog.')->group(function() {
+    Route::get('/', 'pageBlog')->name('index');
+    Route::get('/{post}', 'pageBlogOverview')->name('overview');
 });
-
-Route::get('/services-old', function () {
-    return view('layout.services');
-});
-
-Route::get('/service-detail', function () {
-    return view('layout.service-detail');
-});
-
-Route::get('/services', function () {
-    return view('layout.services-new');
-});
-
-Route::get('/blog', function () {
-    return view('layout.publication');
-});
-
-Route::get('/', function () {
-    return view('layout.frontpage-new');
-})->name('minipage');
-
 
 // en, id
 // Route::prefix('{lang}')->group(function() {

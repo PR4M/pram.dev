@@ -4,7 +4,7 @@ return [
     'home' => "Beranda",
     'products' => "Produk",
     'services' => "Layanan",
-    'portfolios' => "Portfolio",
+    'portfolios' => "Karya",
     'thoughts' => "Pemikiran",
 
     'login' => "Login",

@@ -7,12 +7,18 @@ use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\Translatable\HasTranslations;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Support\Carbon;
+use Zoha\Metable;
 
 class Entity extends Model
 {
-    use HasFactory, HasTranslations, HasTags;
+    use HasFactory, HasTranslations, HasTags, Metable;
 
     protected $guarded = [];
+
+    protected $casts = [
+        'order_channels' => 'array',
+    ];
 
     public $translatable = ['title', 'summary', 'body'];
 
@@ -31,6 +37,11 @@ class Entity extends Model
         });
     }
 
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
+
     // -- RELATIONSHIP -- //
 
     public function testimonials()
@@ -46,7 +57,7 @@ class Entity extends Model
     // -- SCOPES -- //
 
     /**
-     * Scope a query to only include popular users.
+     * Scope a query to only include Product records.
      *
      * @param  \Illuminate\Database\Eloquent\Builder  $query
      * @return \Illuminate\Database\Eloquent\Builder
@@ -57,7 +68,7 @@ class Entity extends Model
     }
 
     /**
-     * Scope a query to only include popular users.
+     * Scope a query to only include Service records.
      *
      * @param  \Illuminate\Database\Eloquent\Builder  $query
      * @return \Illuminate\Database\Eloquent\Builder
@@ -68,13 +79,24 @@ class Entity extends Model
     }
 
     /**
-     * Scope a query to only include popular users.
+     * Scope a query to only include Work records.
      *
      * @param  \Illuminate\Database\Eloquent\Builder  $query
      * @return \Illuminate\Database\Eloquent\Builder
      */
-    public function scopePortfolios($query)
+    public function scopeWorks($query)
     {
-        return $query->where('type', 'portfolios');
+        return $query->where('type', 'work');
+    }
+
+    /**
+     * Scope a query to only include published records.
+     *
+     * @param  \Illuminate\Database\Eloquent\Builder  $query
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopePublished($query)
+    {
+        return $query->where('published_at', '>=', Carbon::today());
     }
 }

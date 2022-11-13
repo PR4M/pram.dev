@@ -9,10 +9,12 @@ use Illuminate\Support\Str;
 use Filament\Resources\Form;
 use Filament\Resources\Table;
 use Filament\Resources\Resource;
+use Filament\Forms\Components\Component;
 use Filament\Forms\Components\TextInput;
 use Filament\Notifications\Notification;
 use Illuminate\Database\Eloquent\Builder;
 use Filament\Resources\Concerns\Translatable;
+use Filament\Forms\Components\SpatieTagsInput;
 use App\Filament\Resources\ServiceResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\RelationManagers\TestimonialsRelationManager;
@@ -101,7 +103,7 @@ class ServiceResource extends Resource
                                     ->pattern('$money')
                                 )->required(),
 
-                                // SpatieTagsInput::make('tags'),
+                                SpatieTagsInput::make('tags'),
                             ])
                             ->columns(2),
 
@@ -113,6 +115,54 @@ class ServiceResource extends Resource
                                     ->disableLabel(),
                             ])
                             ->collapsible(),
+
+                        Forms\Components\Section::make('Order Channels')
+                            ->schema([
+                                Forms\Components\Repeater::make('order_channels')
+                                ->schema([
+                                    Forms\Components\Select::make('source')
+                                        ->options([
+                                            'upwork' => 'Upwork',
+                                            'fiverr' => 'Fiverr',
+                                        ])
+                                        ->required(),
+                                    TextInput::make('url')->required(),
+                                ])
+                                ->columns(2)
+                            ])
+                            ->collapsible(),
+
+                        Forms\Components\Section::make('Meta Attributes')
+                            ->schema([
+                                Forms\Components\TextInput::make('work_duration')
+                                    ->helperText('The work duration in hours')
+                                    ->numeric()
+                                    ->minValue(1)
+                                    ->default(1)
+                                    ->required(),
+
+                                Forms\Components\TextInput::make('work_per')
+                                    ->helperText('The work label / per for the price')
+                                    ->placeholder('per website, per hour, etc')
+                                    ->alpha()
+                                    ->required(),
+
+                                Forms\Components\TextInput::make('price_idr')
+                                    ->helperText('The price in Rupiah / IDR')
+                                    ->numeric()
+                                    ->minValue(1)
+                                    ->default(1)
+                                    ->required(),
+
+                                Forms\Components\TextInput::make('price_euro')
+                                    ->helperText('The price in Euro')
+                                    ->numeric()
+                                    ->minValue(1)
+                                    ->default(1)
+                                    ->required()
+
+                            ])
+                            ->columns(4),
                     ])
                     ->columnSpan([
                         'sm' => fn (?Entity $record) => $record === null ? 3 : 3,
@@ -213,4 +263,6 @@ class ServiceResource extends Resource
     {
         return ['en', 'id'];
     }
+
+
 }

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html class lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -8,23 +8,23 @@
     @vite('resources/css/app.css')
 </head>
 
-<body class="bg-gray-50">
+<body class="bg-gray-50 ">
     <!-- navbar -->
     @include('components.navbar')
 
     <!-- header -->
-    <section class="py-16 bg-white md:py-24">
+    <section class="py-16 bg-white dark:bg-slate-800 md:py-24">
         <div class="flex flex-col max-w-6xl px-10 mx-auto lg:flex-row">
 
             <div class="flex flex-col items-start justify-center w-full pr-10 mb-12 lg:w-1/2 lg:mb-0">
                 <div class="relative">
                     <p class="mb-2 text-transparent bg-clip-text font-bold bg-gradient-to-r from-green-400 via-blue-500 to-purple-500 uppercase">Ida Bagus Gede pramana adi putra</p>
-                    <h1 class="text-4xl font-title font-extrabold tracking-tight text-gray-900 sm:text-5xl xl:text-6xl">
+                    <h1 class="text-4xl font-title font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-5xl xl:text-6xl">
                         <span class="block xl:inline">{{ __('homepage.intro') }}</span>
                         <span class="block text-teal-500 xl:inline" data-primary="pink-500">{{ __('homepage.intro_subtitle') }}</span>
                     </h1>
                 </div>
-                <p class="my-8 text-sm font-description text-gray-600 md:text-lg">
+                <p class="my-8 text-sm font-description text-gray-600 dark:text-gray-300 md:text-lg">
                 {{ __('homepage.intro_description') }}
                 </p>
                 <div class="relative flex items-center pt-4 space-x-3">
