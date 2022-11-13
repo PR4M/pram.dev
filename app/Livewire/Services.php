@@ -9,7 +9,6 @@ class Services extends Component
 {
     public function mount()
     {
-        dd ($this->records());
     }
 
     public function records()

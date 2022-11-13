@@ -26,8 +26,8 @@ class CreateService extends CreateRecord
     {
         $this->metableData['work_duration']     = (int) $data['work_duration'];
         $this->metableData['work_per']          = (String) $data['work_per'];
-        $this->metableData['price_idr']         = (int) $data['price_idr'];
-        $this->metableData['price_euro']        = (int) $data['price_euro'];
+        $this->metableData['price_idr']         = (Double) $data['price_idr'];
+        $this->metableData['price_euro']        = (Double) $data['price_euro'];
 
         // unset the meta value so that these don't stored into the model database
         unset($data['work_duration'], $data['work_per'], $data['price_idr'], $data['price_euro']);

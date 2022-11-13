@@ -2,13 +2,14 @@
 
 namespace App\Models;
 
+use Zoha\Metable;
 use Spatie\Tags\HasTags;
 use Illuminate\Support\Str;
+use Illuminate\Support\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\Translatable\HasTranslations;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Support\Carbon;
-use Zoha\Metable;
 
 class Entity extends Model
 {
@@ -34,6 +35,10 @@ class Entity extends Model
             $code = Str::random(4);
             $model->code = $code;
             $model->slug = $model->slug . '-' . $code;
+        });
+
+        static::deleting(function ($model) {
+            $model->deleteMeta();
         });
     }
 
@@ -98,5 +103,19 @@ class Entity extends Model
     public function scopePublished($query)
     {
         return $query->where('published_at', '>=', Carbon::today());
+    }
+
+    // -- ATTRIBUTES -- //
+
+    /**
+     * Get the entity's price.
+     *
+     * @return \Illuminate\Database\Eloquent\Casts\Attribute
+     */
+    protected function localPrice(): Attribute
+    {
+        return Attribute::make(
+            get: fn ($value) => get_lang() == 'en' ? '$'. $this->price : 'Rp '. $this->getMeta('price_idr'),
+        );
     }
 }

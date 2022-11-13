@@ -149,17 +149,27 @@ class ServiceResource extends Resource
 
                                 Forms\Components\TextInput::make('price_idr')
                                     ->helperText('The price in Rupiah / IDR')
-                                    ->numeric()
-                                    ->minValue(1)
-                                    ->default(1)
-                                    ->required(),
+                                    ->mask(fn (TextInput\Mask $mask) => $mask
+                                        ->patternBlocks([
+                                            'money' => fn (TextInput\Mask $mask) => $mask
+                                                ->numeric()
+                                                ->thousandsSeparator(',')
+                                                ->decimalSeparator('.'),
+                                        ])
+                                        ->pattern('Rp money')
+                                    )->required(),
 
                                 Forms\Components\TextInput::make('price_euro')
                                     ->helperText('The price in Euro')
-                                    ->numeric()
-                                    ->minValue(1)
-                                    ->default(1)
-                                    ->required()
+                                    ->mask(fn (TextInput\Mask $mask) => $mask
+                                        ->patternBlocks([
+                                            'money' => fn (TextInput\Mask $mask) => $mask
+                                                ->numeric()
+                                                ->thousandsSeparator(',')
+                                                ->decimalSeparator('.'),
+                                        ])
+                                        ->pattern('€ money')
+                                    )->required()
 
                             ])
                             ->columns(4),

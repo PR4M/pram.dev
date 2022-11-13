@@ -68,63 +68,70 @@
 
                 <!-- Left side of FAQs -->
                 <div class="relative w-full lg:w-1/2 lg:pr-12">
-                    <!-- Question 1 -->
                     <div x-data="{ show: false }" class="relative overflow-hidden text-gray-700 select-none">
-                        <h4 @click="show=!show" class="flex items-center justify-between py-4 text-lg font-medium text-gray-600 cursor-pointer sm:text-xl hover:text-black">
-                            <span>Where do I go to upgrade my account?</span>
+                        <h4 @click="show=!show" class="flex items-center justify-between py-4 text-sm font-medium text-gray-600 cursor-pointer sm:text-base hover:text-black">
+                            <span class="font-description"> {{ __('faq.service_1') }}</span>
                             <svg class="w-6 h-6 mr-2 transition-all duration-200 ease-out transform rotate-0" :class="{ '-rotate-180' : show }" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" class=""></path></svg>
                         </h4>
-                        <p class="px-1 pt-0 mt-1 text-gray-600 sm:text-lg py-7" x-transition:enter="transition-all ease-out duration-300" x-transition:enter-start="opacity-0 transform -translate-y-4" x-transition:enter-end="opacity-100 transform -translate-y-0" x-transition:leave="transition-all ease-out hidden duration-200" x-transition:leave-start="opacity-100 transform -translate-y-0" x-transition:leave-end="opacity-0 transform -translate-y-4" x-show="show" style="display: none;">You can upgrade your account by visiting The Pro Upgrade Page. You will also gain access to many other applications and sections of the site.</p>
+                        <p class="px-1 pt-0 mt-1 font-description text-gray-600 sm:text-base py-7" x-transition:enter="transition-all ease-out duration-300" x-transition:enter-start="opacity-0 transform -translate-y-4" x-transition:enter-end="opacity-100 transform -translate-y-0" x-transition:leave="transition-all ease-out hidden duration-200" x-transition:leave-start="opacity-100 transform -translate-y-0" x-transition:leave-end="opacity-0 transform -translate-y-4" x-show="show" style="display: none;">
+                            {!! __('faq.service_1_description') !!}
+                        </p>
                     </div>
 
-                    <!-- Question 1 -->
                     <div x-data="{ show: false }" class="relative overflow-hidden text-gray-700 select-none">
-                        <h4 @click="show=!show" class="flex items-center justify-between py-4 text-lg font-medium text-gray-600 cursor-pointer sm:text-xl hover:text-black">
-                            <span>Where do I go to upgrade my account?</span>
+                        <h4 @click="show=!show" class="flex items-center justify-between py-4 text-sm font-medium text-gray-600 cursor-pointer sm:text-base hover:text-black">
+                            <span class="font-description"> {{ __('faq.service_2') }}</span>
                             <svg class="w-6 h-6 mr-2 transition-all duration-200 ease-out transform rotate-0" :class="{ '-rotate-180' : show }" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" class=""></path></svg>
                         </h4>
-                        <p class="px-1 pt-0 mt-1 text-gray-600 sm:text-lg py-7" x-transition:enter="transition-all ease-out duration-300" x-transition:enter-start="opacity-0 transform -translate-y-4" x-transition:enter-end="opacity-100 transform -translate-y-0" x-transition:leave="transition-all ease-out hidden duration-200" x-transition:leave-start="opacity-100 transform -translate-y-0" x-transition:leave-end="opacity-0 transform -translate-y-4" x-show="show" style="display: none;">You can upgrade your account by visiting The Pro Upgrade Page. You will also gain access to many other applications and sections of the site.</p>
+                        <p class="px-1 pt-0 mt-1 font-description text-gray-600 sm:text-base py-7" x-transition:enter="transition-all ease-out duration-300" x-transition:enter-start="opacity-0 transform -translate-y-4" x-transition:enter-end="opacity-100 transform -translate-y-0" x-transition:leave="transition-all ease-out hidden duration-200" x-transition:leave-start="opacity-100 transform -translate-y-0" x-transition:leave-end="opacity-0 transform -translate-y-4" x-show="show" style="display: none;">
+                            {!! __('faq.service_2_description') !!}
+                        </p>
                     </div>
 
-                    <!-- Question 1 -->
                     <div x-data="{ show: false }" class="relative overflow-hidden text-gray-700 select-none">
-                        <h4 @click="show=!show" class="flex items-center justify-between py-4 text-lg font-medium text-gray-600 cursor-pointer sm:text-xl hover:text-black">
-                            <span>Where do I go to upgrade my account?</span>
+                        <h4 @click="show=!show" class="flex items-center justify-between py-4 text-sm font-medium text-gray-600 cursor-pointer sm:text-base hover:text-black">
+                            <span class="font-description"> {{ __('faq.service_3') }}</span>
                             <svg class="w-6 h-6 mr-2 transition-all duration-200 ease-out transform rotate-0" :class="{ '-rotate-180' : show }" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" class=""></path></svg>
                         </h4>
-                        <p class="px-1 pt-0 mt-1 text-gray-600 sm:text-lg py-7" x-transition:enter="transition-all ease-out duration-300" x-transition:enter-start="opacity-0 transform -translate-y-4" x-transition:enter-end="opacity-100 transform -translate-y-0" x-transition:leave="transition-all ease-out hidden duration-200" x-transition:leave-start="opacity-100 transform -translate-y-0" x-transition:leave-end="opacity-0 transform -translate-y-4" x-show="show" style="display: none;">You can upgrade your account by visiting The Pro Upgrade Page. You will also gain access to many other applications and sections of the site.</p>
+                        <p class="px-1 pt-0 mt-1 font-description text-gray-600 sm:text-base py-7" x-transition:enter="transition-all ease-out duration-300" x-transition:enter-start="opacity-0 transform -translate-y-4" x-transition:enter-end="opacity-100 transform -translate-y-0" x-transition:leave="transition-all ease-out hidden duration-200" x-transition:leave-start="opacity-100 transform -translate-y-0" x-transition:leave-end="opacity-0 transform -translate-y-4" x-show="show" style="display: none;">
+                            {!! __('faq.service_3_description') !!}
+                        </p>
                     </div>
+
                 </div>
 
 
                 <!-- Right side of FAQs -->
                 <div class="relative w-full lg:w-1/2 lg:pl-12">
 
-                    <!-- Question 1 -->
                     <div x-data="{ show: false }" class="relative overflow-hidden text-gray-700 select-none">
-                        <h4 @click="show=!show" class="flex items-center justify-between py-4 text-lg font-medium text-gray-600 cursor-pointer sm:text-xl hover:text-black">
-                            <span>Where do I go to upgrade my account?</span>
+                        <h4 @click="show=!show" class="flex items-center justify-between py-4 text-sm font-medium text-gray-600 cursor-pointer sm:text-base hover:text-black">
+                            <span class="font-description"> {{ __('faq.service_4') }}</span>
                             <svg class="w-6 h-6 mr-2 transition-all duration-200 ease-out transform rotate-0" :class="{ '-rotate-180' : show }" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" class=""></path></svg>
                         </h4>
-                        <p class="px-1 pt-0 mt-1 text-gray-600 sm:text-lg py-7" x-transition:enter="transition-all ease-out duration-300" x-transition:enter-start="opacity-0 transform -translate-y-4" x-transition:enter-end="opacity-100 transform -translate-y-0" x-transition:leave="transition-all ease-out hidden duration-200" x-transition:leave-start="opacity-100 transform -translate-y-0" x-transition:leave-end="opacity-0 transform -translate-y-4" x-show="show" style="display: none;">You can upgrade your account by visiting The Pro Upgrade Page. You will also gain access to many other applications and sections of the site.</p>
+                        <p class="px-1 pt-0 mt-1 font-description text-gray-600 sm:text-base py-7" x-transition:enter="transition-all ease-out duration-300" x-transition:enter-start="opacity-0 transform -translate-y-4" x-transition:enter-end="opacity-100 transform -translate-y-0" x-transition:leave="transition-all ease-out hidden duration-200" x-transition:leave-start="opacity-100 transform -translate-y-0" x-transition:leave-end="opacity-0 transform -translate-y-4" x-show="show" style="display: none;">
+                            {!! __('faq.service_4_description') !!}
+                        </p>
                     </div>
 
-                    <!-- Question 1 -->
                     <div x-data="{ show: false }" class="relative overflow-hidden text-gray-700 select-none">
-                        <h4 @click="show=!show" class="flex items-center justify-between py-4 text-lg font-medium text-gray-600 cursor-pointer sm:text-xl hover:text-black">
-                            <span>Where do I go to upgrade my account?</span>
+                        <h4 @click="show=!show" class="flex items-center justify-between py-4 text-sm font-medium text-gray-600 cursor-pointer sm:text-base hover:text-black">
+                            <span class="font-description"> {{ __('faq.service_5') }}</span>
                             <svg class="w-6 h-6 mr-2 transition-all duration-200 ease-out transform rotate-0" :class="{ '-rotate-180' : show }" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" class=""></path></svg>
                         </h4>
-                        <p class="px-1 pt-0 mt-1 text-gray-600 sm:text-lg py-7" x-transition:enter="transition-all ease-out duration-300" x-transition:enter-start="opacity-0 transform -translate-y-4" x-transition:enter-end="opacity-100 transform -translate-y-0" x-transition:leave="transition-all ease-out hidden duration-200" x-transition:leave-start="opacity-100 transform -translate-y-0" x-transition:leave-end="opacity-0 transform -translate-y-4" x-show="show" style="display: none;">You can upgrade your account by visiting The Pro Upgrade Page. You will also gain access to many other applications and sections of the site.</p>
+                        <p class="px-1 pt-0 mt-1 font-description text-gray-600 sm:text-base py-7" x-transition:enter="transition-all ease-out duration-300" x-transition:enter-start="opacity-0 transform -translate-y-4" x-transition:enter-end="opacity-100 transform -translate-y-0" x-transition:leave="transition-all ease-out hidden duration-200" x-transition:leave-start="opacity-100 transform -translate-y-0" x-transition:leave-end="opacity-0 transform -translate-y-4" x-show="show" style="display: none;">
+                            {!! __('faq.service_5_description') !!}
+                        </p>
                     </div>
 
-                    <!-- Question 1 -->
                     <div x-data="{ show: false }" class="relative overflow-hidden text-gray-700 select-none">
-                        <h4 @click="show=!show" class="flex items-center justify-between py-4 text-lg font-medium text-gray-600 cursor-pointer sm:text-xl hover:text-black">
-                            <span>Where do I go to upgrade my account?</span>
+                        <h4 @click="show=!show" class="flex items-center justify-between py-4 text-sm font-medium text-gray-600 cursor-pointer sm:text-base hover:text-black">
+                            <span class="font-description"> {{ __('faq.service_6') }}</span>
                             <svg class="w-6 h-6 mr-2 transition-all duration-200 ease-out transform rotate-0" :class="{ '-rotate-180' : show }" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" class=""></path></svg>
                         </h4>
-                        <p class="px-1 pt-0 mt-1 text-gray-600 sm:text-lg py-7" x-transition:enter="transition-all ease-out duration-300" x-transition:enter-start="opacity-0 transform -translate-y-4" x-transition:enter-end="opacity-100 transform -translate-y-0" x-transition:leave="transition-all ease-out hidden duration-200" x-transition:leave-start="opacity-100 transform -translate-y-0" x-transition:leave-end="opacity-0 transform -translate-y-4" x-show="show" style="display: none;">You can upgrade your account by visiting The Pro Upgrade Page. You will also gain access to many other applications and sections of the site.</p>
+                        <p class="px-1 pt-0 mt-1 font-description text-gray-600 sm:text-base py-7" x-transition:enter="transition-all ease-out duration-300" x-transition:enter-start="opacity-0 transform -translate-y-4" x-transition:enter-end="opacity-100 transform -translate-y-0" x-transition:leave="transition-all ease-out hidden duration-200" x-transition:leave-start="opacity-100 transform -translate-y-0" x-transition:leave-end="opacity-0 transform -translate-y-4" x-show="show" style="display: none;">
+                            {{ __('faq.service_6_description') }}
+                        </p>
                     </div>
 
                 </div>
