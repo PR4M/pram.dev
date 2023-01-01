@@ -3,7 +3,7 @@
         <div class="mt-6 grid grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-2">
 
             @foreach ($records as $service)
-            <a href="#" class="relative block shadow-md overflow-hidden rounded-lg border border-gray-100 p-8">
+            <a href="{{ route('services.overview', [$service]) }}" class="relative block shadow-md overflow-hidden rounded-lg border border-gray-100 p-8">
                 <span class="absolute inset-x-0 bottom-0 h-2 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600"></span>
 
                 <div class="justify-between sm:flex">
@@ -33,12 +33,12 @@
                 <dl class="mt-6 flex space-x-6">
                     <div class="flex flex-col-reverse">
                         <dt class="text-sm font-medium text-gray-600">{{ $service->local_price }} / {{ $service->meta->work_per }}</dt>
-                        <dd class="text-xs text-gray-500">Dimulai</dd>
+                        <dd class="text-xs text-gray-500">{{ __('label.started_from') }}</dd>
                     </div>
 
                     <div class="ml-3 flex flex-col-reverse">
-                        <dt class="text-sm font-medium text-gray-600">{{ $service->total_orders }} kali</dt>
-                        <dd class="text-xs text-gray-500">Dipekerjakan</dd>
+                        <dt class="text-sm font-medium text-gray-600">{{ $service->total_orders }} {{ trans_choice('label.times', $service->total_orders) }}</dt>
+                        <dd class="text-xs text-gray-500">{{ __('label.hired_times') }}</dd>
                     </div>
 
                     <div class="ml-3 flex flex-col-reverse">

@@ -48,11 +48,6 @@ class TestimonialsRelationManager extends RelationManager
                     ->default('5')
                     ->required(),
 
-                Forms\Components\Select::make('entity_id')->hint("The service that the testimonial is written for")
-                    ->relationship('entity', 'title')
-                    ->searchable()
-                    ->required(),
-
                 Forms\Components\Select::make('source')->hint("The platform which the testimonial was placed")
                     ->options([
                         'internal' => 'Pram.dev',

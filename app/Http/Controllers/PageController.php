@@ -15,7 +15,7 @@ class PageController extends Controller
 
     public function pageProductOverview(Entity $product)
     {
-        return view('public.products.single');
+        return view('public.products.overview');
     }
 
     public function pageServices()
@@ -25,7 +25,7 @@ class PageController extends Controller
 
     public function pageServiceOverview(Entity $service)
     {
-        return view('public.services.single');
+        return view('public.services.overview', compact('service'));
     }
 
     public function pageWorks()
@@ -35,7 +35,7 @@ class PageController extends Controller
 
     public function pageWorkOverview(Entity $work)
     {
-        return view('public.works.single');
+        return view('public.works.overview');
     }
 
     public function pageBlog()

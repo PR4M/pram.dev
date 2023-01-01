@@ -3,8 +3,8 @@
 return [
     'intro_prefix' => "Hal",
     'intro_postix' => "ditujukan kepadamu untuk",
-    'intro' => "lahir dari pengalaman profesional menjadi jasa terbaik",
-    'intro_subtitle' => "keperluan teknismu",
+    'intro' => "Lahir dari pengalaman profesional menjadi jasa terbaik",
+    'intro_subtitle' => "bagi keperluan teknismu",
 
     'intro_description' => "Dari beragam jasa profesional untum membantumu sebagai sesama developer - hingga jasa lainnya untuk mempermudah pekerjaan dan targetmu. Semua dihadirkan oleh seseorang dengan pengalaman lebih dari lima tahun dan testimoni berbasis fakta oleh klien dari mancanegara.",
 

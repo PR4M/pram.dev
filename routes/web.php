@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
+use App\Models\Entity;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,7 +26,7 @@ Route::prefix('products')->controller(PageController::class)->name('products.')-
 
 Route::prefix('services')->controller(PageController::class)->name('services.')->group(function() {
     Route::get('/', 'pageServices')->name('index');
-    Route::get('/{entity}', 'pageServiceOverview')->name('overview');
+    Route::get('/{service}', 'pageServiceOverview')->name('overview');
 });
 
 Route::prefix('works')->controller(PageController::class)->name('works.')->group(function() {
@@ -50,4 +51,7 @@ Route::prefix('blog')->controller(PageController::class)->name('blog.')->group(f
 //     });
 // });
 
-
+Route::get('view-service', function () {
+    $service = Entity::find(1);
+    dd($service);
+});

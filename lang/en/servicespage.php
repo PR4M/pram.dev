@@ -2,9 +2,10 @@
 
 return [
     'intro_prefix' => "The",
-    'intro' => "Mind-born ideas turns into handcrafted products",
+    'intro' => "Established from real world profesional experience turns into exceptional services",
     'intro_subtitle' => "for developers like you",
-    'intro_description' => "From variety of products to save you time as a fellow developer - to variety of products that allows you become better every day in managing all of your task and personal life. All of them are built by someone who strives to be better and eficient, just like you.",
+
+    'intro_description' => "From variety of professional services to help developers like you - and other exceptional services to help you achieve your target or make your jobs easier. All of these are provided by a pro with over than five years of experience, trusted by many customers from around the globe..",
 
     'startups' => "These products brought to you by the maker of",
 
