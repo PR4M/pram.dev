@@ -19,6 +19,7 @@ class Entity extends Model
 
     protected $casts = [
         'order_channels' => 'array',
+        'attachments'    => 'array'
     ];
 
     public $translatable = ['title', 'summary', 'body'];
