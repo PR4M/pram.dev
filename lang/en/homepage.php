@@ -10,13 +10,13 @@ return [
     'services' => "Professional Services",
     'services_description' => "Here is a few of professional services, provided for you by Pram.dev",
 
-    'products' => "Awesome Products",
+    'products' => "Helpful Products",
     'products_description' => "Programming codes, production-ready apps to Notion templates, select your weapon for starter",
 
     'testimonials' => "Trustworthy Reviews",
     'testimonials_description' => "Here what people have testimonied against my products or services",
 
-    'thoughts' => "Pulications and Thoughts",
+    'thoughts' => "Publications and Thoughts",
     'thoughts_description' => "Some opinion, thoughts and a bit serious publications",
 ];
 

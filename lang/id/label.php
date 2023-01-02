@@ -32,6 +32,8 @@ return [
     'price_to_high' => "Harga: rendah ke tinggi",
     'price_to_low' => "Harga: tinggi ke rendah",
 
+    'read_full_story' => "Baca selengkapnya",
+
     'faq' => "Pertanyaan sering diajukan",
     'credibility_for_service' => "JASA INI DIHADIRKAN OLEH PENGEMBANG BERIKUT",
 ];

@@ -135,7 +135,7 @@
 
             <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="relative z-10 flex items-baseline justify-between pt-24 pb-6 border-b border-gray-200">
-                    <h1 class="font-title text-4xl font-extrabold tracking-tight text-gray-900">New Arrivals</h1>
+                    <h1 class="font-title text-4xl font-extrabold tracking-tight text-gray-900">{{ __('label.latest_published') }}</h1>
 
                     <div x-data="{openSort: false}" class="flex items-center">
                         <div class="relative inline-block text-left">
@@ -253,33 +253,8 @@
                             <!-- Replace with your content -->
                             <div class="grid grid-cols-1 gap-x-8 gap-y-32 sm:grid-cols-2 sm:gap-y-32 lg:grid-cols-2">
 
-                                <div class="shadow-md p-4">
-                                    <p class="text-sm text-gray-500">
-                                      <time datetime="2020-03-10">Mar 10, 2020</time>
-                                    </p>
-                                    <a href="#" class="mt-2 block">
-                                      <p class="text-xl font-semibold text-gray-900">How to use search engine optimization to drive sales</p>
-                                      <p class="mt-3 text-base text-gray-500">Optio cum necessitatibus dolor voluptatum provident commodi et. Qui aperiam fugiat nemo cumque.</p>
-                                    </a>
-                                    <div class="mt-3">
-                                      <a href="#" class="text-base font-semibold text-indigo-600 hover:text-indigo-500"> Read full story </a>
-                                    </div>
-                                </div>
+                                <livewire:publications>
 
-                                <div class="shadow-md p-4">
-                                    <p class="text-sm text-gray-500">
-                                      <time datetime="2020-03-10">Mar 10, 2020</time>
-                                    </p>
-                                    <a href="#" class="mt-2 block">
-                                      <p class="text-xl font-semibold text-gray-900">How to use search engine optimization to drive sales</p>
-                                      <p class="mt-3 text-base text-gray-500">Optio cum necessitatibus dolor voluptatum provident commodi et. Qui aperiam fugiat nemo cumque.</p>
-                                    </a>
-                                    <div class="mt-3">
-                                      <a href="#" class="text-base font-semibold text-indigo-600 hover:text-indigo-500"> Read full story </a>
-                                    </div>
-                                </div>
-
-                                <!-- More products... -->
                             </div>
                             <!-- /End replace -->
                         </div>

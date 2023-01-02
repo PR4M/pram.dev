@@ -32,6 +32,8 @@ return [
     'price_to_high' => "Price: low to high",
     'price_to_low' => "Price: hight to low",
 
+    'read_full_story' => "Read full story",
+
     'faq' => "Frequently asked questions",
     'credibility_for_service' => "THIS PRODUCT BROUGHT TO YOU BY THE MAKER OF",
 ];
