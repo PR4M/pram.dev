@@ -9,7 +9,9 @@ use Illuminate\Support\Str;
 use Filament\Resources\Form;
 use Filament\Resources\Table;
 use Filament\Resources\Resource;
+use Filament\Tables\Filters\Filter;
 use Filament\Forms\Components\TextInput;
+use Filament\Notifications\Notification;
 use Illuminate\Database\Eloquent\Builder;
 use Filament\Resources\Concerns\Translatable;
 use Filament\Forms\Components\SpatieTagsInput;
@@ -184,16 +186,49 @@ class ProductResource extends Resource
     {
         return $table
             ->columns([
-                //
+                Tables\Columns\ImageColumn::make('thumbnail')
+                    ->label('Thumbnail'),
+
+                Tables\Columns\TextColumn::make('title')
+                    ->label('Title')
+                    ->wrap()
+                    ->searchable()
+                    ->sortable(),
+
+                Tables\Columns\TextColumn::make('price')
+                    ->label('Price')
+                    ->money('usd', true)
+                    ->searchable()
+                    ->sortable(),
+
+                Tables\Columns\TextColumn::make('ext_price')
+                    ->label('Price Ext')
+                    ->money('usd', true)
+                    ->searchable()
+                    ->sortable(),
+
+                Tables\Columns\TextColumn::make('total_orders')
+                    ->label('Total Orders')
+                    ->formatStateUsing(fn (string $state): string => "$state total order" )
+                    ->sortable(),
             ])
             ->filters([
-                //
+                Filter::make('type')->label('Type:products')->default()
+                    ->query(fn (Builder $query): Builder => $query->where('type', 'product'))
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
-                Tables\Actions\DeleteBulkAction::make(),
+                Tables\Actions\DeleteBulkAction::make()
+                    ->action(function () {
+                        Notification::make()
+                            ->title('Now, now, don\'t be cheeky, leave some records for others to play with!')
+                            ->warning()
+                            ->send();
+                    }),
             ]);
     }
 

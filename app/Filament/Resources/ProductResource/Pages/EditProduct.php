@@ -34,7 +34,7 @@ class EditProduct extends EditRecord
         return $data;
     }
 
-    protected function mutateFormDataBeforeCreate(array $data): array
+    protected function mutateFormDataBeforeSave(array $data): array
     {
         $this->metableData['price_idr']         = (Double) $data['price_idr'];
         $this->metableData['price_euro']        = (Double) $data['price_euro'];

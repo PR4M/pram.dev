@@ -9,6 +9,7 @@ use Illuminate\Support\Str;
 use Filament\Resources\Form;
 use Filament\Resources\Table;
 use Filament\Resources\Resource;
+use Filament\Tables\Filters\Filter;
 use Filament\Forms\Components\Component;
 use Filament\Forms\Components\TextInput;
 use Filament\Notifications\Notification;
@@ -228,14 +229,10 @@ class ServiceResource extends Resource
                     ->formatStateUsing(fn (string $state): string => "$state total order" )
                     ->sortable(),
 
-                Tables\Columns\TextColumn::make('slug')
-                    ->searchable()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-
             ])
             ->filters([
-                //
+                Filter::make('type')->label('Type:services')->default()
+                    ->query(fn (Builder $query): Builder => $query->where('type', 'service'))
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
